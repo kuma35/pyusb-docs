@@ -1,0 +1,11 @@
+github_personal_access_token.txt
+*~
+#*#
+_build/html
+_build/doctrees
+.doctrees
+venv
+Makefile
+make.bat
+*.mo
+
