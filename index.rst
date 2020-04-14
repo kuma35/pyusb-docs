@@ -13,6 +13,7 @@ Welcome to pyusb-docs's documentation!
    README
    docs/tutorial
    docs/faq
+   LICENSE
 
 
 Indices and tables
