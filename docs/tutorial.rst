@@ -634,8 +634,8 @@ Subscribe instructions can be found at the PyUSB_ website.
 .. _libusb: http://www.libusb.info
 .. _OpenUSB: http://sourceforge.net/p/openusb/wiki/Home/
 .. _USB: http://www.usb.org
-.. _PyUSB: http://pyusb.wiki.sourceforge.net
+.. _PyUSB: https://pyusb.github.io/pyusb/
 .. _Python: http://www.python.org
-.. _ctypes: http://docs.python.org/library/ctypes.html
+.. _ctypes: https://docs.python.org/ja/3/library/ctypes.html
 .. _Descriptor: http://www.beyondlogic.org/usbnutshell/usb5.htm
-.. _array: http://docs.python.org/library/array.html
+.. _array: https://docs.python.org/ja/3/library/array.html
