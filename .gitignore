@@ -8,4 +8,5 @@ venv
 Makefile
 make.bat
 *.mo
+__pycache__
 

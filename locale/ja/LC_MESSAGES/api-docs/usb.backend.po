@@ -1,0 +1,474 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, pyusb
+# This file is distributed under the same license as the pyusb-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pyusb-docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-14 23:21+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../api-docs/usb.backend.rst:2
+msgid "usb.backend package"
+msgstr ""
+
+#: ../../api-docs/usb.backend.rst:5
+msgid "Submodules"
+msgstr ""
+
+#: ../../api-docs/usb.backend.rst:8
+msgid "usb.backend.libusb0 module"
+msgstr ""
+
+#: ../../api-docs/usb.backend.rst:16
+msgid "usb.backend.libusb1 module"
+msgstr ""
+
+#: ../../api-docs/usb.backend.rst:24
+msgid "usb.backend.openusb module"
+msgstr ""
+
+#: ../../api-docs/usb.backend.rst:33
+msgid "Module contents"
+msgstr ""
+
+#: of usb.backend:1
+msgid "usb.backend - Backend interface."
+msgstr ""
+
+#: of usb.backend:3
+msgid "This module exports:"
+msgstr ""
+
+#: of usb.backend:5
+msgid "IBackend - backend interface."
+msgstr ""
+
+#: of usb.backend:7
+msgid ""
+"Backends are Python objects which implement the IBackend interface. The "
+"easiest way to do so is inherinting from IBackend."
+msgstr ""
+
+#: of usb.backend:10
+msgid ""
+"PyUSB already provides backends for libusb versions 0.1 and 1.0, and "
+"OpenUSB library. Backends modules included with PyUSB are required to "
+"export the get_backend() function, which returns an instance of a backend"
+" object. You can provide your own customized backend if you want to. "
+"Below you find a skeleton of a backend implementation module:"
+msgstr ""
+
+#: of usb.backend:16
+msgid "import usb.backend"
+msgstr ""
+
+#: of usb.backend:19
+msgid "class MyBackend(usb.backend.IBackend):"
+msgstr ""
+
+#: of usb.backend:19
+msgid "pass"
+msgstr ""
+
+#: of usb.backend:22
+msgid "def get_backend():"
+msgstr ""
+
+#: of usb.backend:22
+msgid "return MyBackend()"
+msgstr ""
+
+#: of usb.backend:24
+msgid ""
+"You can use your customized backend by passing it as the backend "
+"parameter of the usb.core.find() function. For example:"
+msgstr ""
+
+#: of usb.backend:27
+msgid "import custom_backend import usb.core"
+msgstr ""
+
+#: of usb.backend:30
+msgid "myidVendor = 0xfffe myidProduct = 0x0001"
+msgstr ""
+
+#: of usb.backend:33
+msgid "mybackend = custom_backend.get_backend()"
+msgstr ""
+
+#: of usb.backend:36
+msgid "dev = usb.core.find(backend = mybackend, idProduct=myidProduct,"
+msgstr ""
+
+#: of usb.backend:36
+msgid "idVendor=myidVendor)"
+msgstr ""
+
+#: of usb.backend:38
+msgid ""
+"For custom backends, you are not required to supply the get_backend() "
+"function, since the application code will instantiate the backend."
+msgstr ""
+
+#: of usb.backend:41
+msgid ""
+"If you do not provide a backend to the find() function, it will use one "
+"of the defaults backend according to its internal rules. For details, "
+"consult the find() function documentation."
+msgstr ""
+
+#: of usb.backend.IBackend:1
+msgid "Bases: :class:`usb._objfinalizer.AutoFinalizedObject`"
+msgstr ""
+
+#: of usb.backend.IBackend:1
+msgid "Backend interface."
+msgstr ""
+
+#: of usb.backend.IBackend:3
+msgid ""
+"IBackend is the basic interface for backend implementations. By default, "
+"the methods of the interface raise a NotImplementedError exception. A "
+"backend implementation should replace the methods to provide the "
+"funcionality necessary."
+msgstr ""
+
+#: of usb.backend.IBackend:8
+msgid ""
+"As Python is a dynamic typed language, you are not obligated to inherit "
+"from IBackend: everything that behaves like an IBackend is an IBackend. "
+"But you are strongly recommended to do so, inheriting from IBackend "
+"provides consistent default behavior."
+msgstr ""
+
+#: of usb.backend.IBackend.attach_kernel_driver:1
+msgid ""
+"Re-attach an interface's kernel driver, which was previously detached "
+"using detach_kernel_driver()."
+msgstr ""
+
+#: of usb.backend.IBackend.bulk_read:1
+msgid "Perform a bulk read."
+msgstr ""
+
+#: of usb.backend.IBackend.bulk_read:3
+msgid ""
+"dev_handle is the value returned by the open_device() method. The ep "
+"parameter is the bEndpointAddress field whose endpoint the data will be "
+"received from. intf is the bInterfaceNumber field of the interface "
+"containing the endpoint. The buff parameter is the buffer to receive the "
+"data read, the length of the buffer tells how many bytes should be read. "
+"The timeout parameter specifies a time limit to the operation in "
+"miliseconds."
+msgstr ""
+
+#: of usb.backend.IBackend.bulk_read:11 usb.backend.IBackend.intr_read:11
+#: usb.backend.IBackend.iso_read:11
+msgid "The method returns the number of bytes actually read."
+msgstr ""
+
+#: of usb.backend.IBackend.bulk_write:1
+msgid "Perform a bulk write."
+msgstr ""
+
+#: of usb.backend.IBackend.bulk_write:3 usb.backend.IBackend.intr_write:3
+#: usb.backend.IBackend.iso_write:3
+msgid ""
+"dev_handle is the value returned by the open_device() method. The ep "
+"parameter is the bEndpointAddress field whose endpoint the data will be "
+"sent to. intf is the bInterfaceNumber field of the interface containing "
+"the endpoint. The data parameter is the data to be sent. It must be an "
+"instance of the array.array class. The timeout parameter specifies a time"
+" limit to the operation in miliseconds."
+msgstr ""
+
+#: of usb.backend.IBackend.bulk_write:11 usb.backend.IBackend.intr_write:11
+#: usb.backend.IBackend.iso_write:11
+msgid "The method returns the number of bytes written."
+msgstr ""
+
+#: of usb.backend.IBackend.claim_interface:1
+msgid "Claim the given interface."
+msgstr ""
+
+#: of usb.backend.IBackend.claim_interface:3
+msgid ""
+"Interface claiming is not related to USB spec itself, but it is generally"
+" an necessary call of the USB libraries. It requests exclusive access to "
+"the interface on the system. This method must be called before using one "
+"of the transfer methods."
+msgstr ""
+
+#: of usb.backend.IBackend.claim_interface:8
+msgid ""
+"dev_handle is the value returned by the open_device() method and intf is "
+"the bInterfaceNumber field of the desired interface."
+msgstr ""
+
+#: of usb.backend.IBackend.clear_halt:1
+msgid "Clear the halt/stall condition for the endpoint."
+msgstr ""
+
+#: of usb.backend.IBackend.close_device:1
+msgid "Close the device handle."
+msgstr ""
+
+#: of usb.backend.IBackend.close_device:3
+msgid ""
+"This method closes the device communication channel and releases any "
+"system resources related to it."
+msgstr ""
+
+#: of usb.backend.IBackend.ctrl_transfer:1
+msgid "Perform a control transfer on the endpoint 0."
+msgstr ""
+
+#: of usb.backend.IBackend.ctrl_transfer:3
+msgid ""
+"The direction of the transfer is inferred from the bmRequestType field of"
+" the setup packet."
+msgstr ""
+
+#: of usb.backend.IBackend.ctrl_transfer:6
+msgid ""
+"dev_handle is the value returned by the open_device() method. "
+"bmRequestType, bRequest, wValue and wIndex are the same fields of the "
+"setup packet. data is an array object, for OUT requests it contains the "
+"bytes to transmit in the data stage and for IN requests it is the buffer "
+"to hold the data read. The number of bytes requested to transmit or "
+"receive is equal to the length of the array times the data.itemsize "
+"field. The timeout parameter specifies a time limit to the operation in "
+"miliseconds."
+msgstr ""
+
+#: of usb.backend.IBackend.ctrl_transfer:15
+msgid ""
+"Return the number of bytes written (for OUT transfers) or the data read "
+"(for IN transfers), as an array.array object."
+msgstr ""
+
+#: of usb.backend.IBackend.detach_kernel_driver:1
+msgid "Detach a kernel driver from an interface."
+msgstr ""
+
+#: of usb.backend.IBackend.detach_kernel_driver:3
+msgid ""
+"If successful, you will then be able to claim the interface and perform "
+"I/O."
+msgstr ""
+
+#: of usb.backend.IBackend.enumerate_devices:1
+msgid ""
+"This function is required to return an iterable object which yields an "
+"implementation defined device identification for each USB device found in"
+" the system."
+msgstr ""
+
+#: of usb.backend.IBackend.enumerate_devices:5
+msgid ""
+"The device identification object is used as argument to other methods of "
+"the interface."
+msgstr ""
+
+#: of usb.backend.IBackend.get_configuration:1
+msgid "Get the current active device configuration."
+msgstr ""
+
+#: of usb.backend.IBackend.get_configuration:3
+msgid ""
+"This method returns the bConfigurationValue of the currently active "
+"configuration. Depending on the backend and the OS, either a cached value"
+" may be returned or a control request may be issued. The dev_handle "
+"parameter is the value returned by the open_device method."
+msgstr ""
+
+#: of usb.backend.IBackend.get_configuration_descriptor:1
+msgid "Return a configuration descriptor of the given device."
+msgstr ""
+
+#: of usb.backend.IBackend.get_configuration_descriptor:3
+msgid ""
+"The object returned is required to have all the Configuration Descriptor "
+"fields acessible as member variables. They must be convertible (but not "
+"required to be equal) to the int type."
+msgstr ""
+
+#: of usb.backend.IBackend.get_configuration_descriptor:7
+msgid ""
+"The dev parameter is the device identification object. config is the "
+"logical index of the configuration (not the bConfigurationValue field).  "
+"By \"logical index\" we mean the relative order of the configurations "
+"returned by the peripheral as a result of GET_DESCRIPTOR request."
+msgstr ""
+
+#: of usb.backend.IBackend.get_device_descriptor:1
+msgid "Return the device descriptor of the given device."
+msgstr ""
+
+#: of usb.backend.IBackend.get_device_descriptor:3
+msgid ""
+"The object returned is required to have all the Device Descriptor fields "
+"accessible as member variables. They must be convertible (but not "
+"required to be equal) to the int type."
+msgstr ""
+
+#: of usb.backend.IBackend.get_device_descriptor:7
+msgid ""
+"dev is an object yielded by the iterator returned by the "
+"enumerate_devices() method."
+msgstr ""
+
+#: of usb.backend.IBackend.get_endpoint_descriptor:1
+msgid "Return an endpoint descriptor of the given device."
+msgstr ""
+
+#: of usb.backend.IBackend.get_endpoint_descriptor:3
+msgid ""
+"The object returned is required to have all the Endpoint Descriptor "
+"fields acessible as member variables. They must be convertible (but not "
+"required to be equal) to the int type."
+msgstr ""
+
+#: of usb.backend.IBackend.get_endpoint_descriptor:7
+msgid ""
+"The ep parameter is the endpoint logical index (not the bEndpointAddress "
+"field) of the endpoint descriptor desired. dev, intf, alt and config are "
+"the same values already described in the get_interface_descriptor() "
+"method."
+msgstr ""
+
+#: of usb.backend.IBackend.get_interface_descriptor:1
+msgid "Return an interface descriptor of the given device."
+msgstr ""
+
+#: of usb.backend.IBackend.get_interface_descriptor:3
+msgid ""
+"The object returned is required to have all the Interface Descriptor "
+"fields accessible as member variables. They must be convertible (but not "
+"required to be equal) to the int type."
+msgstr ""
+
+#: of usb.backend.IBackend.get_interface_descriptor:7
+msgid ""
+"The dev parameter is the device identification object. The intf parameter"
+" is the interface logical index (not the bInterfaceNumber field) and alt "
+"is the alternate setting logical index (not the bAlternateSetting value)."
+" Not every interface has more than one alternate setting.  In this case, "
+"the alt parameter should be zero. config is the configuration logical "
+"index (not the bConfigurationValue field)."
+msgstr ""
+
+#: of usb.backend.IBackend.get_parent:1
+msgid "Return the parent device of the given device."
+msgstr ""
+
+#: of usb.backend.IBackend.intr_read:1
+msgid "Perform an interrut read."
+msgstr ""
+
+#: of usb.backend.IBackend.intr_read:3
+msgid ""
+"dev_handle is the value returned by the open_device() method. The ep "
+"parameter is the bEndpointAddress field whose endpoint the data will be "
+"received from. intf is the bInterfaceNumber field of the interface "
+"containing the endpoint. The buff parameter is the buffer to receive the "
+"data read, the length of the buffer tells how many bytes should be read."
+"  The timeout parameter specifies a time limit to the operation in "
+"miliseconds."
+msgstr ""
+
+#: of usb.backend.IBackend.intr_write:1
+msgid "Perform an interrupt write."
+msgstr ""
+
+#: of usb.backend.IBackend.is_kernel_driver_active:1
+msgid "Determine if a kernel driver is active on an interface."
+msgstr ""
+
+#: of usb.backend.IBackend.is_kernel_driver_active:3
+msgid ""
+"If a kernel driver is active, you cannot claim the interface, and the "
+"backend will be unable to perform I/O."
+msgstr ""
+
+#: of usb.backend.IBackend.iso_read:1
+msgid "Perform an isochronous read."
+msgstr ""
+
+#: of usb.backend.IBackend.iso_read:3
+msgid ""
+"dev_handle is the value returned by the open_device() method. The ep "
+"parameter is the bEndpointAddress field whose endpoint the data will be "
+"received from. intf is the bInterfaceNumber field of the interface "
+"containing the endpoint. The buff parameter is buffer to receive the data"
+" read, the length of the buffer tells how many bytes should be read. The "
+"timeout parameter specifies a time limit to the operation in miliseconds."
+msgstr ""
+
+#: of usb.backend.IBackend.iso_write:1
+msgid "Perform an isochronous write."
+msgstr ""
+
+#: of usb.backend.IBackend.open_device:1
+msgid "Open the device for data exchange."
+msgstr ""
+
+#: of usb.backend.IBackend.open_device:3
+msgid ""
+"This method opens the device identified by the dev parameter for "
+"communication. This method must be called before calling any "
+"communication related method, such as transfer methods."
+msgstr ""
+
+#: of usb.backend.IBackend.open_device:7
+msgid ""
+"It returns a handle identifying the communication instance. This handle "
+"must be passed to the communication methods."
+msgstr ""
+
+#: of usb.backend.IBackend.release_interface:1
+msgid "Release the claimed interface."
+msgstr ""
+
+#: of usb.backend.IBackend.release_interface:3
+msgid "dev_handle and intf are the same parameters of the claim_interface method."
+msgstr ""
+
+#: of usb.backend.IBackend.reset_device:1
+msgid "Reset the device."
+msgstr ""
+
+#: of usb.backend.IBackend.set_configuration:1
+msgid "Set the active device configuration."
+msgstr ""
+
+#: of usb.backend.IBackend.set_configuration:3
+msgid ""
+"This method should be called to set the active configuration of the "
+"device. The dev_handle parameter is the value returned by the "
+"open_device() method and the config_value parameter is the "
+"bConfigurationValue field of the related configuration descriptor."
+msgstr ""
+
+#: of usb.backend.IBackend.set_interface_altsetting:1
+msgid "Set the interface alternate setting."
+msgstr ""
+
+#: of usb.backend.IBackend.set_interface_altsetting:3
+msgid ""
+"This method should only be called when the interface has more than one "
+"alternate setting. The dev_handle is the value returned by the "
+"open_device() method. intf and altsetting are respectivelly the "
+"bInterfaceNumber and bAlternateSetting fields of the related interface."
+msgstr ""
+

@@ -14,6 +14,9 @@ Welcome to pyusb-docs's documentation!
    docs/tutorial
    docs/faq
    LICENSE
+   api-docs/usb
+   api-docs/usb.backend
+   api-docs/modules
 
 
 Indices and tables

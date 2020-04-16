@@ -1,0 +1,1041 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, pyusb
+# This file is distributed under the same license as the pyusb-docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pyusb-docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-14 23:21+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api-docs/usb.rst:2
+msgid "usb package"
+msgstr ""
+
+#: ../../api-docs/usb.rst:5
+msgid "Subpackages"
+msgstr ""
+
+#: ../../api-docs/usb.rst:13
+msgid "Submodules"
+msgstr ""
+
+#: ../../api-docs/usb.rst:16
+msgid "usb.control module"
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control:1
+msgid "usb.control - USB standard control requests"
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control:3
+#: ../../usb/core.py:docstring of usb.core:3
+#: ../../usb/util.py:docstring of usb.util:3
+msgid "This module exports:"
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control:5
+msgid "get_status - get recipeint status clear_feature - clear a recipient feature set_feature - set a recipient feature get_descriptor - get a device descriptor set_descriptor - set a device descriptor get_configuration - get a device configuration set_configuration - set a device configuration get_interface - get a device interface set_interface - set a device interface"
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.get_status:1
+msgid "Return the status for the specified recipient."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.get_status:3
+#: ../../usb/control.py:docstring of usb.control.clear_feature:3
+#: ../../usb/control.py:docstring of usb.control.set_feature:3
+#: ../../usb/control.py:docstring of usb.control.get_descriptor:3
+#: ../../usb/control.py:docstring of usb.control.set_descriptor:3
+#: ../../usb/control.py:docstring of usb.control.get_configuration:3
+#: ../../usb/control.py:docstring of usb.control.set_configuration:3
+#: ../../usb/control.py:docstring of usb.control.get_interface:3
+#: ../../usb/control.py:docstring of usb.control.set_interface:3
+msgid "dev is the Device object to which the request will be sent to."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.get_status:6
+#: ../../usb/control.py:docstring of usb.control.clear_feature:8
+#: ../../usb/control.py:docstring of usb.control.set_feature:8
+msgid "The recipient can be None (on which the status will be queried from the device), an Interface or Endpoint descriptors."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.get_status:9
+msgid "The status value is returned as an integer with the lower word being the two bytes status value."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.clear_feature:1
+msgid "Clear/disable a specific feature."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.clear_feature:6
+msgid "feature is the feature you want to disable."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.set_feature:1
+msgid "Set/enable a specific feature."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.set_feature:6
+msgid "feature is the feature you want to enable."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.get_descriptor:1
+msgid "Return the specified descriptor."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.get_descriptor:6
+msgid "desc_size is the descriptor size."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.get_descriptor:8
+msgid "desc_type and desc_index are the descriptor type and index, respectively. wIndex index is used for string descriptors and represents the Language ID. For other types of descriptors, it is zero."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.set_descriptor:1
+msgid "Update an existing descriptor or add a new one."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.set_descriptor:6
+msgid "The desc parameter is the descriptor to be sent to the device. desc_type and desc_index are the descriptor type and index, respectively. wIndex index is used for string descriptors and represents the Language ID. For other types of descriptors, it is zero."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.get_configuration:1
+msgid "Get the current active configuration of the device."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.get_configuration:6
+msgid "This function differs from the Device.get_active_configuration method because the later may use cached data, while this function always does a device request."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.set_configuration:1
+msgid "Set the current device configuration."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.get_interface:1
+msgid "Get the current alternate setting of the interface."
+msgstr ""
+
+#: ../../usb/control.py:docstring of usb.control.set_interface:1
+msgid "Set the alternate setting of the interface."
+msgstr ""
+
+#: ../../api-docs/usb.rst:24
+msgid "usb.core module"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core:1
+msgid "usb.core - Core USB features."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core:5
+msgid "Device - a class representing a USB device. Configuration - a class representing a configuration descriptor. Interface - a class representing an interface descriptor. Endpoint - a class representing an endpoint descriptor. find() - a function to find USB devices. show_devices() - a function to show the devices present."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device:1
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle:1
+msgid "Bases: :class:`usb._objfinalizer.AutoFinalizedObject`"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device:1
+msgid "Device object."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device:3
+msgid "This class contains all fields of the Device Descriptor according to the USB Specification. You may access them as class properties.  For example, to access the field bDescriptorType of the device descriptor, you can do so:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device:12
+msgid "Additionally, the class provides methods to communicate with the hardware. Typically, an application will first call the set_configuration() method to put the device in a known configured state, optionally call the set_interface_altsetting() to select the alternate setting (if there is more than one) of the interface used, and call the write() and read() methods to send and receive data, respectively."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device:19
+msgid "When working in a new hardware, the first try could be like this:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device:26
+msgid "This sample finds the device of interest (myVendorId and myProductId should be replaced by the corresponding values of your device), then configures the device (by default, the configuration value is 1, which is a typical value for most devices) and then writes some data to the endpoint 0x01."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device:31
+msgid "Timeout values for the write, read and ctrl_transfer methods are specified in miliseconds. If the parameter is omitted, Device.default_timeout value will be used instead. This property can be set by the user at anytime."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.attach_kernel_driver:1
+msgid "Re-attach an interface's kernel driver, which was previously detached using detach_kernel_driver()."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.attach_kernel_driver:4
+msgid "The interface parameter is the device interface number to attach the driver to."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.backend:1
+msgid "Return the backend being used by the device."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.clear_halt:1
+msgid "Clear the halt/stall condition for the endpoint ep."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.configurations:1
+msgid "Return a tuple of the device configurations."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.ctrl_transfer:1
+msgid "Do a control transfer on the endpoint 0."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.ctrl_transfer:3
+msgid "This method is used to issue a control transfer over the endpoint 0 (endpoint 0 is required to always be a control endpoint)."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.ctrl_transfer:6
+msgid "The parameters bmRequestType, bRequest, wValue and wIndex are the same of the USB Standard Control Request format."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.ctrl_transfer:9
+msgid "Control requests may or may not have a data payload to write/read. In cases which it has, the direction bit of the bmRequestType field is used to infer the desired request direction. For host to device requests (OUT), data_or_wLength parameter is the data payload to send, and it must be a sequence type convertible to an array object. In this case, the return value is the number of bytes written in the data payload. For device to host requests (IN), data_or_wLength is either the wLength parameter of the control request specifying the number of bytes to read in data payload, and the return value is an array object with data read, or an array object which the data will be read to, and the return value is the number of bytes read."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.default_timeout:1
+msgid "Default timeout for transfer I/O functions"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.detach_kernel_driver:1
+msgid "Detach a kernel driver."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.detach_kernel_driver:3
+msgid "If successful, you will then be able to perform I/O."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.detach_kernel_driver:5
+msgid "The interface parameter is the device interface number to detach the driver from."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.get_active_configuration:1
+msgid "Return a Configuration object representing the current configuration set."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.is_kernel_driver_active:1
+msgid "Determine if there is kernel driver associated with the interface."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.is_kernel_driver_active:3
+msgid "If a kernel driver is active, the object will be unable to perform I/O."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.is_kernel_driver_active:6
+msgid "The interface parameter is the device interface number to check."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.langids:1
+msgid "Return the USB device's supported language ID codes."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.langids:3
+msgid "These are 16-bit codes familiar to Windows developers, where for example instead of en-US you say 0x0409. USB_LANGIDS.pdf on the usb.org developer site for more info. String requests using a LANGID not in this array should not be sent to the device."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.langids:8
+#: ../../usb/core.py:docstring of usb.core.Device.manufacturer:3
+#: ../../usb/core.py:docstring of usb.core.Device.product:3
+#: ../../usb/core.py:docstring of usb.core.Device.serial_number:3
+msgid "This property will cause some USB traffic the first time it is accessed and cache the resulting value for future use."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.manufacturer:1
+msgid "Return the USB device's manufacturer string descriptor."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.parent:1
+msgid "Return the parent device."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.product:1
+msgid "Return the USB device's product string descriptor."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.read:1
+#: ../../usb/core.py:docstring of usb.core.Endpoint.read:1
+msgid "Read data from the endpoint."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.read:3
+msgid "This method is used to receive data from the device. The endpoint parameter corresponds to the bEndpointAddress member whose endpoint you want to communicate with. The size_or_buffer parameter either tells how many bytes you want to read or supplies the buffer to receive the data (it *must* be an object of the type array)."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.read:9
+#: ../../usb/core.py:docstring of usb.core.Device.write:10
+msgid "The timeout is specified in miliseconds."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.read:11
+msgid "If the size_or_buffer parameter is the number of bytes to read, the method returns an array object with the data read. If the size_or_buffer parameter is an array object, it returns the number of bytes actually read."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.reset:1
+msgid "Reset the device."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.serial_number:1
+msgid "Return the USB device's serial number string descriptor."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.set_configuration:1
+msgid "Set the active configuration."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.set_configuration:3
+msgid "The configuration parameter is the bConfigurationValue field of the configuration you want to set as active. If you call this method without parameter, it will use the first configuration found.  As a device hardly ever has more than one configuration, calling the method without arguments is enough to get the device ready."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.set_interface_altsetting:1
+msgid "Set the alternate setting for an interface."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.set_interface_altsetting:3
+msgid "When you want to use an interface and it has more than one alternate setting, you should call this method to select the appropriate alternate setting. If you call the method without one or the two parameters, it will be selected the first one found in the Device in the same way of the set_configuration method."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.set_interface_altsetting:9
+msgid "Commonly, an interface has only one alternate setting and this call is not necessary. For most devices, either it has more than one alternate setting or not, it is not harmful to make a call to this method with no arguments, as devices will silently ignore the request when there is only one alternate setting, though the USB Spec allows devices with no additional alternate setting return an error to the Host in response to a SET_INTERFACE request."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.set_interface_altsetting:17
+msgid "If you are in doubt, you may want to call it with no arguments wrapped by a try/except clause:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.write:1
+#: ../../usb/core.py:docstring of usb.core.Endpoint.write:1
+msgid "Write data to the endpoint."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.write:3
+msgid "This method is used to send data to the device. The endpoint parameter corresponds to the bEndpointAddress member whose endpoint you want to communicate with."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.write:7
+msgid "The data parameter should be a sequence like type convertible to the array type (see array module)."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Device.write:12
+#: ../../usb/core.py:docstring of usb.core.Endpoint.write:7
+msgid "The method returns the number of bytes written."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Configuration:1
+#: ../../usb/core.py:docstring of usb.core.Interface:1
+#: ../../usb/core.py:docstring of usb.core.Endpoint:1
+#: ../../usb/legacy.py:docstring of usb.legacy.Bus:1
+#: ../../usb/legacy.py:docstring of usb.legacy.Configuration:1
+#: ../../usb/legacy.py:docstring of usb.legacy.Device:1
+#: ../../usb/legacy.py:docstring of usb.legacy.Endpoint:1
+#: ../../usb/legacy.py:docstring of usb.legacy.Interface:1
+msgid "Bases: :class:`object`"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Configuration:1
+msgid "Represent a configuration object."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Configuration:3
+msgid "This class contains all fields of the Configuration Descriptor according to the USB Specification. You may access them as class properties.  For example, to access the field bConfigurationValue of the configuration descriptor, you can do so:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Configuration.interfaces:1
+msgid "Return a tuple of the configuration interfaces."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Configuration.set:1
+msgid "Set this configuration as the active one."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Interface:1
+msgid "Represent an interface object."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Interface:3
+msgid "This class contains all fields of the Interface Descriptor according to the USB Specification. You may access them as class properties. For example, to access the field bInterfaceNumber of the interface descriptor, you can do so:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Interface.endpoints:1
+msgid "Return a tuple of the interface endpoints."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Interface.set_altsetting:1
+msgid "Set the interface alternate setting."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Endpoint:1
+msgid "Represent an endpoint object."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Endpoint:3
+msgid "This class contains all fields of the Endpoint Descriptor according to the USB Specification. You can access them as class properties. For example, to access the field bEndpointAddress of the endpoint descriptor, you can do so:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Endpoint.clear_halt:1
+msgid "Clear the halt/status condition of the endpoint."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Endpoint.read:3
+msgid "The parameter size_or_buffer is either the number of bytes to read or an array object where the data will be put in and timeout is the time limit of the operation. The transfer type and endpoint address are automatically inferred."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Endpoint.read:8
+msgid "The method returns either an array object or the number of bytes actually read."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Endpoint.read:11
+msgid "For details, see the Device.read() method."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Endpoint.write:3
+msgid "The parameter data contains the data to be sent to the endpoint and timeout is the time limit of the operation. The transfer type and endpoint address are automatically inferred."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.Endpoint.write:9
+msgid "For details, see the Device.write() method."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.USBError:1
+#: ../../usb/libloader.py:docstring of usb.libloader.LibraryException:1
+msgid "Bases: :class:`OSError`"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.USBError:1
+msgid "Exception class for USB errors."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.USBError:3
+msgid "Backends must raise this exception when USB related errors occur.  The backend specific error code is available through the 'backend_error_code' member variable."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.USBTimeoutError:1
+msgid "Bases: :class:`usb.core.USBError`"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.USBTimeoutError:1
+msgid "Exception class for connection timeout errors."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.USBTimeoutError:3
+msgid "Backends must raise this exception when a call on a USB connection returns a timeout error code."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.NoBackendError:1
+msgid "Bases: :class:`ValueError`"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.NoBackendError:1
+msgid "Exception class when a valid backend is not found."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:1
+msgid "Find an USB device and return it."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:3
+msgid "find() is the function used to discover USB devices.  You can pass as arguments any combination of the USB Device Descriptor fields to match a device. For example:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:7
+msgid "find(idVendor=0x3f4, idProduct=0x2009)"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:9
+msgid "will return the Device object for the device with idVendor field equals to 0x3f4 and idProduct equals to 0x2009."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:12
+msgid "If there is more than one device which matchs the criteria, the first one found will be returned. If a matching device cannot be found the function returns None. If you want to get all devices, you can set the parameter find_all to True, then find will return an iterator with all matched devices. If no matching device is found, it will return an empty iterator. Example:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:19
+msgid "for printer in find(find_all=True, bDeviceClass=7):"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:19
+#: ../../usb/core.py:docstring of usb.core.find:41
+msgid "print (printer)"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:21
+msgid "This call will get all the USB printers connected to the system.  (actually may be not, because some devices put their class information in the Interface Descriptor)."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:25
+msgid "You can also use a customized match criteria:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:27
+msgid "dev = find(custom_match = lambda d: d.idProduct=0x3f4 and d.idvendor=0x2009)"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:29
+msgid "A more accurate printer finder using a customized match would be like so:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:38
+msgid "def is_printer(dev):"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:33
+msgid "import usb.util if dev.bDeviceClass == 7:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:35
+#: ../../usb/core.py:docstring of usb.core.find:38
+msgid "return True"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:38
+msgid "for cfg in dev:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:38
+msgid "if usb.util.find_descriptor(cfg, bInterfaceClass=7) is not None:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:41
+msgid "for printer in find(find_all=True, custom_match = is_printer):"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:43
+msgid "Now even if the device class code is in the interface descriptor the printer will be found."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:46
+msgid "You can combine a customized match with device descriptor fields. In this case, the fields must match and the custom_match must return True. In the our previous example, if we would like to get all printers belonging to the manufacturer 0x3f4, the code would be like so:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:51
+msgid "printers = list(find(find_all=True, idVendor=0x3f4, custom_match=is_printer))"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:53
+msgid "If you want to use find as a 'list all devices' function, just call it with find_all = True:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:56
+msgid "devices = list(find(find_all=True))"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:58
+msgid "Finally, you can pass a custom backend to the find function:"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:60
+msgid "find(backend = MyBackend())"
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:62
+msgid "PyUSB has builtin backends for libusb 0.1, libusb 1.0 and OpenUSB.  If you do not supply a backend explicitly, find() function will select one of the predefineds backends according to system availability."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.find:66
+msgid "Backends are explained in the usb.backend module."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.show_devices:1
+msgid "Show information about connected devices."
+msgstr ""
+
+#: ../../usb/core.py:docstring of usb.core.show_devices:3
+msgid "The verbose flag sets to verbose or not. **kwargs are passed directly to the find() function."
+msgstr ""
+
+#: ../../api-docs/usb.rst:32
+msgid "usb.legacy module"
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.Bus:1
+msgid "Bus object."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.Configuration:1
+msgid "Configuration descriptor object."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.Device:1
+msgid "Device descriptor object"
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.Device.open:1
+msgid "Open the device for use."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.Device.open:3
+msgid "Returns a DeviceHandle object"
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.bulkRead:1
+msgid "Performs a bulk read request to the endpoint specified."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.bulkRead:0
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.bulkWrite:0
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.claimInterface:0
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.clearHalt:0
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.controlMsg:0
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.detachKernelDriver:0
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.getDescriptor:0
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.getString:0
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.interruptRead:0
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.interruptWrite:0
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.resetEndpoint:0
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.setAltInterface:0
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.setConfiguration:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.bulkRead:3
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.bulkWrite:3
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.clearHalt:3
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.interruptRead:3
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.interruptWrite:3
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.resetEndpoint:3
+msgid "endpoint number."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.bulkRead:4
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.interruptRead:4
+msgid "number of bytes to read."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.bulkRead:5
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.bulkWrite:6
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.controlMsg:11
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.interruptRead:5
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.interruptWrite:6
+msgid "operation timeout in milliseconds. (default: 100)"
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.bulkRead:7
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.interruptRead:7
+msgid "Returns a tuple with the data read."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.bulkWrite:1
+msgid "Perform a bulk write request to the endpoint specified."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.bulkWrite:4
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.interruptWrite:4
+msgid "sequence data buffer to write. This parameter can be any sequence type."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.bulkWrite:8
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.controlMsg:13
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.interruptWrite:8
+msgid "Returns the number of bytes written."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.claimInterface:1
+msgid "Claims the interface with the Operating System."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.claimInterface:3
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.detachKernelDriver:4
+msgid "interface number or an Interface object."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.clearHalt:1
+msgid "Clears any halt status on the specified endpoint."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.controlMsg:1
+msgid "Perform a control request to the default control pipe on a device."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.controlMsg:3
+msgid "specifies the direction of data flow, the type of request, and the recipient."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.controlMsg:5
+msgid "specifies the request."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.controlMsg:6
+msgid "if the transfer is a write transfer, buffer is a sequence with the transfer data, otherwise, buffer is the number of bytes to read."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.controlMsg:9
+msgid "specific information to pass to the device. (default: 0) index: specific information to pass to the device. (default: 0)"
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.detachKernelDriver:2
+msgid "Detach a kernel driver from the interface (if one is attached,"
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.detachKernelDriver:2
+msgid "we have permission and the operation is supported by the OS)"
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.getDescriptor:1
+msgid "Retrieves a descriptor from the device identified by the type and index of the descriptor."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.getDescriptor:4
+msgid "descriptor type."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.getDescriptor:5
+msgid "index of the descriptor."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.getDescriptor:6
+msgid "descriptor length."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.getDescriptor:7
+msgid "ignored."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.getString:2
+msgid "Retrieve the string descriptor specified by index"
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.getString:2
+msgid "and langid from a device."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.getString:4
+msgid "index of descriptor in the device."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.getString:5
+msgid "number of bytes of the string (ignored)"
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.getString:6
+msgid "Language ID. If it is omitted, the first language will be used."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.interruptRead:1
+msgid "Performs a interrupt read request to the endpoint specified."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.interruptWrite:1
+msgid "Perform a interrupt write request to the endpoint specified."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.releaseInterface:1
+msgid "Release an interface previously claimed with claimInterface."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.reset:1
+msgid "Reset the specified device by sending a RESET down the port it is connected to."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.resetEndpoint:1
+msgid "Reset all states for the specified endpoint."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.setAltInterface:1
+msgid "Sets the active alternate setting of the current interface."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.setAltInterface:3
+msgid "an alternate setting number or an Interface object."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.setConfiguration:1
+msgid "Set the active configuration of a device."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.DeviceHandle.setConfiguration:3
+msgid "a configuration value or a Configuration object."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.Endpoint:1
+msgid "Endpoint descriptor object."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.Interface:1
+msgid "Interface descriptor object."
+msgstr ""
+
+#: ../../usb/legacy.py:docstring of usb.legacy.busses:1
+msgid "Returns a tuple with the usb busses."
+msgstr ""
+
+#: ../../api-docs/usb.rst:40
+msgid "usb.libloader module"
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.LibraryNotFoundException:1
+#: ../../usb/libloader.py:docstring of usb.libloader.LibraryNotLoadedException:1
+#: ../../usb/libloader.py:docstring of usb.libloader.LibraryMissingSymbolsException:1
+msgid "Bases: :class:`usb.libloader.LibraryException`"
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.NoLibraryCandidatesException:1
+msgid "Bases: :class:`usb.libloader.LibraryNotFoundException`"
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.locate_library:1
+msgid "Tries to locate a library listed in candidates using the given find_library() function (or ctypes.util.find_library). Returns the first library found, which can be the library's name or the path to the library file, depending on find_library(). Returns None if no library is found."
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.locate_library:7
+msgid "arguments: * candidates   -- iterable with library names * find_library -- function that takes one positional arg (candidate)"
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.locate_library:10
+msgid "and returns a non-empty str if a library has been found. Any \"false\" value (None,False,empty str) is interpreted as \"library not found\". Defaults to ctypes.util.find_library if not given or None."
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_library:1
+msgid "Loads a library. Catches and logs exceptions."
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_library:3
+msgid "Returns: the loaded library or None"
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_library:5
+msgid "arguments: * lib        -- path to/name of the library to be loaded * name       -- the library's identifier (for logging)"
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_library:8
+msgid "Defaults to None."
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_library:9
+msgid "lib_cls    -- library class. Defaults to None (-> ctypes.CDLL)."
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_locate_library:1
+msgid "Locates and loads a library."
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_locate_library:3
+msgid "Returns: the loaded library"
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_locate_library:5
+msgid "arguments: * candidates    -- candidates list for locate_library() * cygwin_lib    -- name of the cygwin library * name          -- lib identifier (for logging). Defaults to None. * win_cls       -- class that is used to instantiate the library on"
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_locate_library:10
+msgid "win32 platforms. Defaults to None (-> ctypes.CDLL)."
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_locate_library:11
+msgid "cygwin_cls    -- library class for cygwin platforms."
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_locate_library:12
+#: ../../usb/libloader.py:docstring of usb.libloader.load_locate_library:14
+msgid "Defaults to None (-> ctypes.CDLL)."
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_locate_library:13
+msgid "others_cls    -- library class for all other platforms."
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_locate_library:15
+msgid "find_library  -- see locate_library(). Defaults to None."
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_locate_library:19
+msgid "check_symbols -- either None or a list of symbols that the loaded lib"
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_locate_library:17
+msgid "must provide (hasattr(<>)) in order to be considered valid. LibraryMissingSymbolsException is raised if any symbol is missing."
+msgstr ""
+
+#: ../../usb/libloader.py:docstring of usb.libloader.load_locate_library:21
+msgid "raises: * NoLibraryCandidatesException * LibraryNotFoundException * LibraryNotLoadedException * LibraryMissingSymbolsException"
+msgstr ""
+
+#: ../../api-docs/usb.rst:48
+msgid "usb.util module"
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util:1
+msgid "usb.util - Utility functions."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util:5
+msgid "endpoint_address - return the endpoint absolute address. endpoint_direction - return the endpoint transfer direction. endpoint_type - return the endpoint type ctrl_direction - return the direction of a control transfer build_request_type - build a bmRequestType field of a control transfer. find_descriptor - find an inner descriptor. claim_interface - explicitly claim an interface. release_interface - explicitly release an interface. dispose_resources - release internal resources allocated by the object. get_langids - retrieve the list of supported string languages from the device. get_string - retrieve a string descriptor from the device."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.build_request_type:1
+msgid "Build a bmRequestType field for control requests."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.build_request_type:3
+msgid "These is a conventional function to build a bmRequestType for a control request."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.build_request_type:6
+msgid "The direction parameter can be CTRL_OUT or CTRL_IN. The type parameter can be CTRL_TYPE_STANDARD, CTRL_TYPE_CLASS, CTRL_TYPE_VENDOR or CTRL_TYPE_RESERVED values. The recipient can be CTRL_RECIPIENT_DEVICE, CTRL_RECIPIENT_INTERFACE, CTRL_RECIPIENT_ENDPOINT or CTRL_RECIPIENT_OTHER."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.build_request_type:12
+msgid "Return the bmRequestType value."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.claim_interface:1
+msgid "Explicitly claim an interface."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.claim_interface:3
+msgid "PyUSB users normally do not have to worry about interface claiming, as the library takes care of it automatically. But there are situations where you need deterministic interface claiming. For these uncommon cases, you can use claim_interface."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.claim_interface:8
+msgid "If the interface is already claimed, either through a previously call to claim_interface or internally by the device object, nothing happens."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.create_buffer:1
+msgid "Create a buffer to be passed to a read function."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.create_buffer:3
+msgid "A read function may receive an out buffer so the data is read inplace and the object can be reused, avoiding the overhead of creating a new object at each new read call. This function creates a compatible sequence buffer of the given length."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.ctrl_direction:1
+msgid "Return the direction of a control request."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.ctrl_direction:3
+msgid "The bmRequestType parameter is the value of the bmRequestType field of a control transfer. The possible return values are CTRL_OUT or CTRL_IN."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.dispose_resources:1
+msgid "Release internal resources allocated by the object."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.dispose_resources:3
+msgid "Sometimes you need to provide deterministic resources freeing, for example to allow another application to talk to the device. As Python does not provide deterministic destruction, this function releases all internal resources allocated by the device, like device handle and interface policy."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.dispose_resources:10
+msgid "After calling this function, you can continue using the device object normally. If the resources will be necessary again, it will be allocated automatically."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.endpoint_address:1
+msgid "Return the endpoint absolute address."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.endpoint_address:3
+msgid "The address parameter is the bEndpointAddress field of the endpoint descriptor."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.endpoint_direction:1
+msgid "Return the endpoint direction."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.endpoint_direction:3
+msgid "The address parameter is the bEndpointAddress field of the endpoint descriptor. The possible return values are ENDPOINT_OUT or ENDPOINT_IN."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.endpoint_type:1
+msgid "Return the transfer type of the endpoint."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.endpoint_type:3
+msgid "The bmAttributes parameter is the bmAttributes field of the endpoint descriptor. The possible return values are: ENDPOINT_TYPE_CTRL, ENDPOINT_TYPE_ISO, ENDPOINT_TYPE_BULK or ENDPOINT_TYPE_INTR."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.find_descriptor:1
+msgid "Find an inner descriptor."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.find_descriptor:3
+msgid "find_descriptor works in the same way as the core.find() function does, but it acts on general descriptor objects. For example, suppose you have a Device object called dev and want a Configuration of this object with its bConfigurationValue equals to 1, the code would be like so:"
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.find_descriptor:11
+msgid "You can use any field of the Descriptor as a match criteria, and you can supply a customized match just like core.find() does. The find_descriptor function also accepts the find_all parameter to get an iterator instead of just one descriptor."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.get_langids:1
+msgid "Retrieve the list of supported Language IDs from the device."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.get_langids:3
+msgid "Most client code should not call this function directly, but instead use the langids property on the Device object, which will call this function as needed and cache the result."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.get_langids:7
+msgid "USB LANGIDs are 16-bit integers familiar to Windows developers, where for example instead of en-US you say 0x0409. See the file USB_LANGIDS.pdf somewhere on the usb.org site for a list, which does not claim to be complete. It requires \"system software must allow the enumeration and selection of LANGIDs that are not currently on this list.\" It also requires \"system software should never request a LANGID not defined in the LANGID code array (string index = 0) presented by a device.\" Client code can check this tuple before issuing string requests for a specific language ID."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.get_langids:16
+msgid "dev is the Device object whose supported language IDs will be retrieved."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.get_langids:18
+msgid "The return value is a tuple of integer LANGIDs, possibly empty if the device does not support strings at all (which USB 3.1 r1.0 section 9.6.9 allows). In that case client code should not request strings at all."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.get_langids:22
+msgid "A USBError may be raised from this function for some devices that have no string support, instead of returning an empty tuple. The accessor for the langids property on Device catches that case and supplies an empty tuple, so client code can ignore this detail by using the langids property instead of directly calling this function."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.get_string:1
+msgid "Retrieve a string descriptor from the device."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.get_string:3
+msgid "dev is the Device object which the string will be read from."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.get_string:5
+msgid "index is the string descriptor index and langid is the Language ID of the descriptor. If langid is omitted, the string descriptor of the first Language ID will be returned."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.get_string:9
+msgid "Zero is never the index of a real string. The USB spec allows a device to use zero in a string index field to indicate that no string is provided. So the caller does not have to treat that case specially, this function returns None if passed an index of zero, and generates no traffic to the device."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.get_string:15
+msgid "The return value is the unicode string present in the descriptor, or None if the requested index was zero."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.release_interface:1
+msgid "Explicitly release an interface."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.release_interface:3
+msgid "This function is used to release an interface previously claimed, either through a call to claim_interface or internally by the device object."
+msgstr ""
+
+#: ../../usb/util.py:docstring of usb.util.release_interface:7
+msgid "Normally, you do not need to worry about claiming policies, as the device object takes care of it automatically."
+msgstr ""
+
+#: ../../api-docs/usb.rst:57
+msgid "Module contents"
+msgstr ""
+
+#: ../../usb/__init__.py:docstring of usb:1
+msgid "PyUSB - Easy USB access in Python"
+msgstr ""
+
+#: ../../usb/__init__.py:docstring of usb:3
+msgid "This package exports the following modules and subpackages:"
+msgstr ""
+
+#: ../../usb/__init__.py:docstring of usb:5
+msgid "core - the main USB implementation legacy - the compatibility layer with 0.x version backend - the support for backend implementations. control - USB standard control requests. libloader - helper module for backend library loading."
+msgstr ""
+
+#: ../../usb/__init__.py:docstring of usb:11
+msgid "Since version 1.0, main PyUSB implementation lives in the 'usb.core' module. New applications are encouraged to use it."
+msgstr ""
