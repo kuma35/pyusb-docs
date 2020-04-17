@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pyusb-docs \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-12 08:03+0900\n"
-"PO-Revision-Date: 2020-04-12 09:08+0900\n"
+"PO-Revision-Date: 2020-04-16 10:56+0900\n"
 "Last-Translator: kuma35\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -42,7 +42,7 @@ msgstr "0.4バージョンまではPyUSBはlibusbの薄いラッパーでした�
 msgid ""
 "As with most Python modules, PyUSB's documentation is based on Python doc"
 " strings and can therefore be manipulated by tools such as pydoc."
-msgstr "ほとんどのPythonモジュールと同様に、PyUSBのドキュメントはPython doc stringに基づいているため、pydocなどのツールで操作できます。"
+msgstr "ほとんどのPythonモジュールと同様に、PyUSBのドキュメントはPython docstringに基づいているため、pydocなどのツールで操作できます。"
 
 #: ../../README.rst:18
 msgid ""
