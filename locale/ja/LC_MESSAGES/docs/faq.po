@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pyusb-docs \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-12 08:03+0900\n"
-"PO-Revision-Date: 2020-04-14 11:42+0900\n"
+"PO-Revision-Date: 2020-04-16 11:09+0900\n"
 "Last-Translator: kuma35\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -90,7 +90,7 @@ msgstr "選択した構成(configuration)の、すでに構成(configured)され
 msgid ""
 "Typically ``set_configuration()`` is called during device initialization."
 " The `libusb documentation`_ on ``libusb_set_configuration()`` states:"
-msgstr ""
+msgstr "通常、 ``set_configuration()`` はデバイスの初期化中に呼び出されます。 `libusb documentation`_ の ``libusb_set_configuration()`` は次のように述べています:"
 
 #: ../../faq.rst:58
 msgid ""
@@ -99,11 +99,11 @@ msgid ""
 "device reset: it will issue a SET_CONFIGURATION request using the current"
 " configuration, causing most USB-related device state to be reset "
 "(altsetting reset to zero, endpoint halts cleared, toggles reset)."
-msgstr ""
+msgstr "あなたが、選択した構成(configuration)で既に構成(configure)されているデバイスでこの関数を呼び出すと、この関数は軽量のデバイスリセット(lightweight device reset)として機能します。すなわち、当座(current)の構成(configuration)を使用してSET_CONFIGURATIONリクエストを発行し、ほとんどのUSB関連デバイスの状態をリセットします(altsettingをゼロにリセットし、エンドポイントをクリアし停止、resetをトグル)。"
 
 #: ../../faq.rst:60
 msgid "Calling ``write()`` subsequently will therefore result in a timeout error."
-msgstr ""
+msgstr "したがって、その後 ``write()`` を呼び出すと、タイムアウトエラーが発生します。"
 
 #: ../../faq.rst:62
 msgid ""
@@ -111,5 +111,5 @@ msgid ""
 "configuration, as described in the `configuration selection and "
 "handling`_. \"If the configuration we want is already active, then we "
 "don't have to select any configuration\"::"
-msgstr ""
+msgstr "この動作に対する解決策の一つは、 `configuration selection and handling`_ (構成(configuration)の選択と処理)で説明されているように、現在アクティブな構成を検討することです。 \"必要な構成(configuration)が既にアクティブである場合、構成(configuration)を選択する必要はありません\" ::"
 
