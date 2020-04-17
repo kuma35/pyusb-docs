@@ -598,12 +598,6 @@ work, but you don't have to. If you run your application untouched it will just
 work, because the ``import usb`` statement will import all public symbols from
 ``usb.legacy``. If you face a problem, probably you found a bug.
 
-Help me, please
----------------
-
-If you need help, **do not email me**, the mailing list is there for this.
-Subscribe instructions can be found at the PyUSB_ website.
-
 .. [#] When I say True or False (capitalized), I mean the respective values of
        the Python language. And when I say true and false, I mean any
        expression in Python which evals to true or false.
@@ -634,8 +628,7 @@ Subscribe instructions can be found at the PyUSB_ website.
 .. _libusb: http://www.libusb.info
 .. _OpenUSB: http://sourceforge.net/p/openusb/wiki/Home/
 .. _USB: http://www.usb.org
-.. _PyUSB: https://pyusb.github.io/pyusb/
 .. _Python: http://www.python.org
-.. _ctypes: https://docs.python.org/ja/3/library/ctypes.html
+.. _ctypes: http://docs.python.org/library/ctypes.html
 .. _Descriptor: http://www.beyondlogic.org/usbnutshell/usb5.htm
-.. _array: https://docs.python.org/ja/3/library/array.html
+.. _array: http://docs.python.org/library/array.html

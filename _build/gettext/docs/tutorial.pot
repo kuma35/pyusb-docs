@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyusb-docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-14 01:50+0900\n"
+"POT-Creation-Date: 2020-04-18 01:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -412,46 +412,38 @@ msgstr ""
 msgid "If you wrote an application using the old PyUSB API (0.whatever), you may be asking yourself if you need to update your code to use the new API. Well, you should, but you don't need to. PyUSB 1.0 comes with the ``usb.legacy`` compatibility module. It implements the older API above the new API. \"So, do I have just to replace my ``import usb`` statement with ``import usb.legacy as usb`` to get my application working?\", you ask. The answer is yes, it will work, but you don't have to. If you run your application untouched it will just work, because the ``import usb`` statement will import all public symbols from ``usb.legacy``. If you face a problem, probably you found a bug."
 msgstr ""
 
-#: ../../docs/tutorial.rst:602
-msgid "Help me, please"
-msgstr ""
-
-#: ../../docs/tutorial.rst:604
-msgid "If you need help, **do not email me**, the mailing list is there for this. Subscribe instructions can be found at the PyUSB_ website."
-msgstr ""
-
-#: ../../docs/tutorial.rst:607
+#: ../../docs/tutorial.rst:601
 msgid "When I say True or False (capitalized), I mean the respective values of the Python language. And when I say true and false, I mean any expression in Python which evals to true or false."
 msgstr ""
 
-#: ../../docs/tutorial.rst:611
+#: ../../docs/tutorial.rst:605
 msgid "See backend specific documentation."
 msgstr ""
 
-#: ../../docs/tutorial.rst:613
+#: ../../docs/tutorial.rst:607
 msgid "USB spec does not impose any sequential value to the configuration value. The same is true for interface and alternate setting numbers."
 msgstr ""
 
-#: ../../docs/tutorial.rst:616
+#: ../../docs/tutorial.rst:610
 msgid "Actually things are a little more complex, but this simple explanation is enough for us."
 msgstr ""
 
-#: ../../docs/tutorial.rst:619
+#: ../../docs/tutorial.rst:613
 msgid "I know it sounds weird."
 msgstr ""
 
-#: ../../docs/tutorial.rst:621
+#: ../../docs/tutorial.rst:615
 msgid "This is because if there is no bandwidth for isochronous transfer at the device configuration time, the device can be successfully enumerated."
 msgstr ""
 
-#: ../../docs/tutorial.rst:624
+#: ../../docs/tutorial.rst:618
 msgid "This does not happen for configurations because a device is allowed to be in an unconfigured state."
 msgstr ""
 
-#: ../../docs/tutorial.rst:627
+#: ../../docs/tutorial.rst:621
 msgid "In PyUSB, control transfers are only issued in the endpoint 0. It's very very very rare a device having an alternate control endpoint (I've never seen such a device)."
 msgstr ""
 
-#: ../../docs/tutorial.rst:631
+#: ../../docs/tutorial.rst:625
 msgid "It's just a joke, don't take it seriously. Many choices is better than no choice."
 msgstr ""
