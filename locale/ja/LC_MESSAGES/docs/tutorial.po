@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pyusb-docs \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-12 08:03+0900\n"
-"PO-Revision-Date: 2020-04-14 11:05+0900\n"
+"PO-Revision-Date: 2020-04-18 01:32+0900\n"
 "Last-Translator: kuma35\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -425,7 +425,7 @@ msgid ""
 "Wow! You can use a ``Configuration`` object as a parameter to "
 "``set_configuration``!  Yes, and also it has a ``set`` method to "
 "configure itself as the current configuration."
-msgstr "えっへん！ ``Configuration`` オブジェクトを ``set_configuration`` のパラメータとして使用できます！ はい、そしてそれ自身を現在の構成(configuration)として設定するための ``set`` メソッドもあります。"
+msgstr "えっへん！ ``Configuration`` オブジェクトを ``set_configuration`` のパラメータとして使用できます！ はい、そしてそれ自身を当座(current)の構成(configuration)として設定するための ``set`` メソッドもあります。"
 
 #: ../../tutorial.rst:367
 msgid ""
@@ -442,7 +442,7 @@ msgid ""
 "interface is called a composite device. When you connect your "
 "multifunction printer to your computer, the Operating System would load "
 "two different drivers: one for each \"logical\" peripheral you have [#]_."
-msgstr ""
+msgstr "構成する必要がある場合と必要ない場合があるもう1つの設定は、インターフェイスの代替設定です。各デバイスは一度に1つのアクティブ化された構成(configration)のみを持つことができ、各構成(configuration)には複数のインターフェイスがあり、すべてのインターフェイスを同時に使用できます。 インターフェイスを論理デバイスと考えると、この概念をよりよく理解できます。 たとえば、多機能プリンターを想像してみましょう。これは同時にプリンターとスキャナーです。 物事をシンプルに(または少なくともできるだけシンプルに)保つために、構成(configuration)が1つしかないと考えてみましょう。 プリンターとスキャナーがあるため、構成には2つのインターフェースがあり、1つはプリンター用、もう1つはスキャナー用です。 複数のインターフェースを持つデバイスは、複合デバイスと呼ばれます。 多機能プリンターをコンピューターに接続すると、オペレーティングシステムは2つの異なるドライバーをロードします。すなわち、あなたがお持ちの「論理」機器ごとに1つです。 [#]_ "
 
 #: ../../tutorial.rst:380
 msgid ""
@@ -457,7 +457,7 @@ msgid ""
 "endpoint(s). But as opposed to configurations, interfaces with just one "
 "alternate setting don't need to be set [#]_. You select an interface "
 "alternate setting through the ``set_interface_altsetting`` function:"
-msgstr ""
+msgstr "じゃあ代替設定(alternate setting)の方はどうなの？ ええ、インターフェイスには1つ以上の代替設定があります。 代替設定が1つしかないインターフェイスは、代替設定がないと見なされます( [#]_ )。 代替設定(alternate setting)はインターフェイス用であり、構成(configuration)はデバイス用です。つまり、各インターフェイス対して、アクティブにできる代替設定(alternate setting)は1つだけです。 たとえば、USB仕様では、デバイスのプライマリ代替設定(alternate setting)にアイソクロナス・エンドポイント(isochronous endpoint)を含めることはできないため( [#]_ ) 、ストリーミングデバイスには少なくとも2つの代替設定(alternate setting)が必要で、2番目の設定にはアイソクロナス・エンドポイント(isochronous endpoint)があります。 ただし、構成(configuration)とは異なり、代替設定(alternate setting)が1つだけのインターフェイスを設定する必要はありません( [#]_ )。 ``set_interface_altsetting`` 関数でインターフェイスの代替設定(alternate setting)を選択します:"
 
 #: ../../tutorial.rst:397
 msgid ""
@@ -467,7 +467,7 @@ msgid ""
 "more than one alternate setting or it accepts a SET_INTERFACE request, "
 "the safest way is to call ``set_interface_altsetting`` inside an try-"
 "except block, like this:"
-msgstr ""
+msgstr "USB仕様では、追加の代替設定(alternate settings)のないインターフェイスに対するSET_INTERFACEリクエストを受信した場合、デバイスはエラーを返すことが許可されているとされています。したがって、インターフェースに複数の代替設定(alternate settings)があるか、またはSET_INTERFACEリクエストを受け入れるかどうか不明な場合は、次のようにtry-exceptブロック内で ``set_interface_altsetting`` を呼び出すのが最も安全な方法です:"
 
 #: ../../tutorial.rst:411
 msgid ""
@@ -475,17 +475,17 @@ msgid ""
 "the ``interface`` and ``alternate_setting`` parameters are automatically "
 "inferred from ``bInterfaceNumber`` and ``bAlternateSetting`` fields. "
 "Example:"
-msgstr ""
+msgstr "あなたは関数のパラメータとして ``Interface`` オブジェクトを使用することもでき、 その際、 ``interface`` と ``alternate_setting`` パラメータは ``bInterfaceNumber`` と ``bAlternateSetting`` フィールドから自動的に推論されます。 例えば:"
 
 #: ../../tutorial.rst:422
 msgid ""
 "The ``Interface`` object must belong to the active configuration "
 "descriptor."
-msgstr ""
+msgstr "その ``Interface`` オブジェクトはアクティブな構成(configuration)デスクリプタに属している必要があります。"
 
 #: ../../tutorial.rst:425
 msgid "Talk to me, honey"
-msgstr ""
+msgstr "私とお話して頂戴"
 
 #: ../../tutorial.rst:427
 msgid ""
@@ -494,7 +494,7 @@ msgid ""
 "I don't intend to explain the purpose of each transfer and the "
 "differences among them. Therefore, I assume you know at least the basics "
 "of the USB transfers."
-msgstr ""
+msgstr "いよいよUSBデバイスと通信する方法を学ぶ時が来ました。 USBには、バルク(bulk)と割り込み(interrupt)とアイソクロナス(isochronous)と制御(control)の、4種類の転送方法があります。 私は各転送方法の目的とそれらの間の違いを説明するつもりはありません。私は、あなたが少なくともUSB転送の基本を知っているものとして扱います。"
 
 #: ../../tutorial.rst:432
 msgid ""
@@ -502,20 +502,20 @@ msgid ""
 "in the spec, the others just send and receive raw data from USB point of "
 "view. Because of it, you have a different function to deal with control "
 "transfers, all the other transfers are managed by the same functions."
-msgstr ""
+msgstr "制御(control)転送は、仕様に記載されている構造化データを持つ唯一の転送です。他の転送は、USBの観点からは生データを送受信するだけです。 そのため、制御(control)転送を処理するためだけに別の関数があり、他のすべての転送は同じ関数によって管理されます。"
 
 #: ../../tutorial.rst:437
 msgid ""
 "You issue a control transfer through the ``ctrl_transfer`` method. It is "
 "used both for OUT and IN transfers. The transfer direction is determined "
 "from the ``bmRequestType`` parameter."
-msgstr ""
+msgstr "あなたは ``ctrl_transfer`` メソッドを介して制御(control)転送を発行します。それはOUT転送とIN転送の両方に使用されます。転送方向は ``bmRequestType`` パラメータによって決定されます。"
 
 #: ../../tutorial.rst:441
 msgid ""
 "The ``ctrl_transfer`` parameters are almost equal to the control request "
 "structure. Following is a example of how to do a control transfer [#]_:"
-msgstr ""
+msgstr "``ctrl_transfer`` パラメータは制御要求構造(control request structure)とほとんど同じです。 以下は、制御(control)転送を行う方法の例です([#]_):"
 
 #: ../../tutorial.rst:452
 msgid ""
@@ -523,7 +523,7 @@ msgid ""
 "control requests that act as a loopback pipe. What you write with the "
 "``CTRL_LOOPBACK_WRITE`` message, you can read with the "
 "``CTRL_LOOPBACK_READ`` message."
-msgstr ""
+msgstr "この例では、デバイスがループバック・パイプとして機能する2つのカスタム制御要求(custom control request)を実装していると想定しています。 ``CTRL_LOOPBACK_WRITE`` メッセージで書き込んだものは、 ``CTRL_LOOPBACK_READ`` メッセージで読み取ることができます。"
 
 #: ../../tutorial.rst:457
 msgid ""
@@ -539,7 +539,7 @@ msgid ""
 " transfer, the return value is the number of bytes really sent to the "
 "device. In an IN transfer, the return value is an array_ object with the "
 "data read."
-msgstr ""
+msgstr "最初の4つのパラメータは、標準制御転送構造(standard control transfer)のフィールド ``bmRequestType``、 ``bmRequest``、 ``wValue``、 ``wIndex`` です。 5番目のパラメーター(訳注:data_or_wLength=None)は、OUT転送のデータ・ペイロード、またはIN転送で読み取るバイト数です。 データペイロードは、array_ ``__init__`` メソッドのパラメーターとして使用できる任意のシーケンス型にすることができます。 データ・ペイロードがない場合、パラメータは  ``None`` (またはIN転送の場合は0)でなければなりません。 操作のタイムアウトを指定する最後のオプションパラメータ(訳注:timeout=None)が1つあります。 指定しない場合は、デフォルトのタイムアウトが使用されます(詳しくは後で説明します)。 OUT転送では、戻り値は実際にデバイスに送信されたバイト数です。IN転送では、戻り値はデータが読み込まれた array_ オブジェクトです。"
 
 #: ../../tutorial.rst:469
 msgid ""
@@ -548,7 +548,7 @@ msgid ""
 "transfer type, it is automatically determined from the endpoint address. "
 "Here is our loopback example assuming the we have a loopback pipe in the "
 "endpoint 1:"
-msgstr ""
+msgstr "他の転送については、メソッド ``write`` と ``read`` を使用して、データの書き込みと読み取りを行います。転送タイプを気にする必要はありません。転送タイプはエンドポイント・アドレスから自動的に決定されます。エンドポイント1にループバック・パイプがあると想定したループバックの例を以下に示します:"
 
 #: ../../tutorial.rst:483
 msgid ""
@@ -557,7 +557,7 @@ msgid ""
 "data payload (write) or the number of bytes to read (read). The returned "
 "data if either an instance of the array_ object for the ``read`` method "
 "or the number of bytes written for the ``write`` method."
-msgstr ""
+msgstr "最初(endpoint)と3番目(timeout)のパラメーターはread/write両方のメソッドで等しくそれぞれエンドポイント・アドレスとタイムアウトです。 2番目のパラメーターは、データ・ペイロード(write)または読み取るバイト数(read)です。 ``read`` メソッドの戻り値は array_ オブジェクトのインスタンスで、``write`` メソッドの戻り値はで書き込んだバイト数です。"
 
 #: ../../tutorial.rst:489
 msgid ""
@@ -565,18 +565,18 @@ msgid ""
 "to ``read`` and ``ctrl_transfer`` an array_ object in which the data will"
 " be read into. In this case, the number of bytes to read will be the "
 "length of the array times the ``array.itemsize`` value."
-msgstr ""
+msgstr "ベータ2バージョン以降、バイト数の代わりに、データが読み込まれる array_ オブジェクトを ``read`` と ``ctrl_transfer`` に渡すこともできます。 この場合、読み込むバイト数は、配列の長さと ``array.itemsize`` 値の積になります。"
 
 #: ../../tutorial.rst:494
 msgid ""
 "As in ``ctrl_transfer``, the ``timeout`` parameter is optional. When the "
 "``timeout`` is omitted, it is used the ``Device.default_timeout`` "
 "property as the operation timeout."
-msgstr ""
+msgstr "``ctrl_transfer`` と同様に、 ``timeout`` パラメータはオプションです。 ``timeout`` が省略された場合、操作のタイムアウト値として ``Device.default_timeout`` プロパティが使用されます。"
 
 #: ../../tutorial.rst:499
 msgid "Control yourself"
-msgstr ""
+msgstr "自分自身を制御する"
 
 #: ../../tutorial.rst:501
 msgid ""
@@ -584,15 +584,15 @@ msgid ""
 "functions which implement the standard USB control requests and the "
 "``usb.util`` module has the convenience function ``get_string`` "
 "specifically to return string descriptors."
-msgstr ""
+msgstr "転送関数に加えて、モジュール ``usb.control`` は、標準のUSB制御要求(standard USB control request)を実装する関数を提供し、 ``usb.util`` モジュールには、文字列デスクリプタを返すための便利な関数 ``get_string`` があります。"
 
 #: ../../tutorial.rst:507
 msgid "Additional Topics"
-msgstr ""
+msgstr "オマケ"
 
 #: ../../tutorial.rst:510
 msgid "Behind every great abstraction, there's a great implementation"
-msgstr ""
+msgstr "優れた抽象化の背後には、優れた実装があります"
 
 #: ../../tutorial.rst:512
 msgid ""
@@ -603,7 +603,7 @@ msgid ""
 "democratic library, you may choose whichever library you want. Actually, "
 "you can write your own USB library from scratch and tell PyUSB to use it."
 " But you are probably better sticking with libusb 1.0."
-msgstr ""
+msgstr "初期の頃は libusb_ しかありませんでした。次にlibusb 1.0が登場し、libusb 0.1と1.0がリリースされました。 その後、OpenUSB_ が開発され、現在私たちは、USBライブラリのバベルの塔( `Tower of Babel <http://en.wikipedia.org/wiki/Tower_of_Babel>`__ )に住んでいます([#]_) 。 PyUSBはそれをどのように扱いますか？ ええ、PyUSBは民主的なライブラリです。あなたは好きなライブラリを選択できます。 実際、独自のUSBライブラリを最初から作成して、PyUSBに使用するように指示することができます。 しかし、あなたはたぶんlibusb 1.0を使用するのがいいでしょう。"
 
 #: ../../tutorial.rst:520
 msgid ""
@@ -613,7 +613,7 @@ msgid ""
 "``usb.backend.IBackend``, responsible to implement the operating system "
 "specific USB stuff. As you might guess, the builtins are libusb 1.0 "
 "(default), libusb 0.1 and OpenUSB (deprecated) backends."
-msgstr ""
+msgstr "``find`` 関数には、まだ説明していないパラメータがあります。これは ``backend`` パラメータです。 指定しない場合は、組み込みのバックエンドの1つが使用されます。 バックエンドは ``usb.backend.IBackend`` から継承されたオブジェクトで、オペレーティング・システム固有のUSBの実装を担当します。ご想像のとおり、既にPyUSBに組み込み済なのはlibusb 1.0(デフォルト)とlibusb 0.1とOpenUSB(非推奨)バックエンドです。"
 
 #: ../../tutorial.rst:527
 msgid ""
@@ -621,11 +621,11 @@ msgid ""
 "``IBackend`` and implement the methods necessary. You might want to take "
 "a look at the ``usb.backend`` package documentation to learn how to do "
 "that."
-msgstr ""
+msgstr "あなたは独自のバックエンドを作成・使用することができます。 ``IBackend`` から継承し、必要なメソッドを実装するだけです。 方法については、 ``usb.backend`` パッケージのドキュメントをご覧ください。"
 
 #: ../../tutorial.rst:532
 msgid "Don't be selfish"
-msgstr ""
+msgstr "ホンマわがままやなぁ…"
 
 #: ../../tutorial.rst:534
 msgid ""
@@ -639,7 +639,7 @@ msgid ""
 "and free the resources deterministically.  For these kind of "
 "applications, the ``usb.util`` module has a set of functions to deal with"
 " resource management."
-msgstr ""
+msgstr "Pythonには、*自動メモリ管理* (automatic memory management)と呼ばれるものがあります。 これは、仮想マシンがオブジェクトをメモリから解放するタイミングを決定することを意味します。 内部的には、PyUSBは動作する必要のあるすべての低レベルのリソース(インターフェイスの要求、デバイス・ハンドルなど)を管理し、ほとんどのユーザーはそのことを心配する必要はありません。ただし、Pythonのオブジェクトの自動破棄には非決定的(nondetrministic)な性質があるため、ユーザーは割り当てられたリソースがいつ解放されるかを予測できません。一部のアプリケーションは、確定的にリソースを割り当てて解放する必要があります。これらの種類のアプリケーションのために、 ``usb.util`` モジュールはリソース管理を扱うための一連の関数を持っています。"
 
 #: ../../tutorial.rst:544
 msgid ""
@@ -730,17 +730,17 @@ msgid ""
 "When I say True or False (capitalized), I mean the respective values of "
 "the Python language. And when I say true and false, I mean any expression"
 " in Python which evals to true or false."
-msgstr ""
+msgstr "TrueまたはFalse（先頭大文字）とは、Python言語のそういう値を意味します。そして私がtrueやfalseを言うとき、それはtrueとfalseに評価されるPythonのあらゆる表現を意味します。"
 
 #: ../../tutorial.rst:611
 msgid "See backend specific documentation."
-msgstr ""
+msgstr "各々のバックエンドのドキュメントを参照してください。"
 
 #: ../../tutorial.rst:613
 msgid ""
 "USB spec does not impose any sequential value to the configuration value."
 " The same is true for interface and alternate setting numbers."
-msgstr ""
+msgstr "USB仕様では、構成(configuration)に順番になるような値を義務付けていません(訳注:次の値が+1で得られると期待するな、飛び飛びバラバラを覚悟せよということ)。 インターフェイスと代替設定(alternate setting)番号についても同様です。"
 
 #: ../../tutorial.rst:616
 msgid ""
