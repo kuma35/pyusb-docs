@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the pyusb-docs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: pyusb-docs \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-14 23:21+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2020-04-25 09:40+0900\n"
+"Last-Translator: kuma35\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,45 +19,45 @@ msgstr ""
 
 #: ../../api-docs/usb.backend.rst:2
 msgid "usb.backend package"
-msgstr ""
+msgstr "usb.backend パッケージ"
 
 #: ../../api-docs/usb.backend.rst:5
 msgid "Submodules"
-msgstr ""
+msgstr "サブモジュール"
 
 #: ../../api-docs/usb.backend.rst:8
 msgid "usb.backend.libusb0 module"
-msgstr ""
+msgstr "usb.backend.libusb0 モジュール"
 
 #: ../../api-docs/usb.backend.rst:16
 msgid "usb.backend.libusb1 module"
-msgstr ""
+msgstr "usb.backend.libusb1 モジュール"
 
 #: ../../api-docs/usb.backend.rst:24
 msgid "usb.backend.openusb module"
-msgstr ""
+msgstr "usb.backend.openusb モジュール"
 
 #: ../../api-docs/usb.backend.rst:33
 msgid "Module contents"
-msgstr ""
+msgstr "モジュール内容"
 
 #: of usb.backend:1
 msgid "usb.backend - Backend interface."
-msgstr ""
+msgstr "usb.backend - バックエンド・インターフェイス"
 
 #: of usb.backend:3
 msgid "This module exports:"
-msgstr ""
+msgstr "本モジュールからは以下がエスクポートされます:"
 
 #: of usb.backend:5
 msgid "IBackend - backend interface."
-msgstr ""
+msgstr "IBackend - バックエンド・インターフェイス"
 
 #: of usb.backend:7
 msgid ""
 "Backends are Python objects which implement the IBackend interface. The "
 "easiest way to do so is inherinting from IBackend."
-msgstr ""
+msgstr "バックエンド(backend)は、IBackendインターフェイスを実装するPythonオブジェクトです。 これを行う最も簡単な方法は、IBackendから継承することです。"
 
 #: of usb.backend:10
 msgid ""
@@ -66,74 +66,74 @@ msgid ""
 "export the get_backend() function, which returns an instance of a backend"
 " object. You can provide your own customized backend if you want to. "
 "Below you find a skeleton of a backend implementation module:"
-msgstr ""
+msgstr "PyUSBはすでにlibusbバージョン0.1と1.0、およびOpenUSBライブラリのバックエンドを提供しています。 PyUSBに含まれるバックエンド・モジュールは、バックエンド・オブジェクトのインスタンスを返すget_backend()関数をエクスポートする必要があります。必要に応じて、独自にカスタマイズしたバックエンドを提供できます。 以下に、バックエンド実装モジュールのスケルトンを示します:"
 
 #: of usb.backend:16
 msgid "import usb.backend"
-msgstr ""
+msgstr "import usb.backend"
 
 #: of usb.backend:19
 msgid "class MyBackend(usb.backend.IBackend):"
-msgstr ""
+msgstr "class MyBackend(usb.backend.IBackend):"
 
 #: of usb.backend:19
 msgid "pass"
-msgstr ""
+msgstr "pass"
 
 #: of usb.backend:22
 msgid "def get_backend():"
-msgstr ""
+msgstr "def get_backend():"
 
 #: of usb.backend:22
 msgid "return MyBackend()"
-msgstr ""
+msgstr "return MyBackend()"
 
 #: of usb.backend:24
 msgid ""
 "You can use your customized backend by passing it as the backend "
 "parameter of the usb.core.find() function. For example:"
-msgstr ""
+msgstr "あなたは、あなたがカスタマイズしたバックエンドを usb.core.find() 関数のバックエンド・パラメータとして渡すことで使用できます。例えば:"
 
 #: of usb.backend:27
 msgid "import custom_backend import usb.core"
-msgstr ""
+msgstr "import custom_backend import usb.core"
 
 #: of usb.backend:30
 msgid "myidVendor = 0xfffe myidProduct = 0x0001"
-msgstr ""
+msgstr "myidVendor = 0xfffe myidProduct = 0x0001"
 
 #: of usb.backend:33
 msgid "mybackend = custom_backend.get_backend()"
-msgstr ""
+msgstr "mybackend = custom_backend.get_backend()"
 
 #: of usb.backend:36
 msgid "dev = usb.core.find(backend = mybackend, idProduct=myidProduct,"
-msgstr ""
+msgstr "dev = usb.core.find(backend = mybackend, idProduct=myidProduct,"
 
 #: of usb.backend:36
 msgid "idVendor=myidVendor)"
-msgstr ""
+msgstr "idVendor=myidVendor)"
 
 #: of usb.backend:38
 msgid ""
 "For custom backends, you are not required to supply the get_backend() "
 "function, since the application code will instantiate the backend."
-msgstr ""
+msgstr "カスタム・バックエンドの場合、アプリケーション・コードがバックエンドをインスタンス化するため、あなたは get_backend()関数を提供する必要はありません。"
 
 #: of usb.backend:41
 msgid ""
 "If you do not provide a backend to the find() function, it will use one "
 "of the defaults backend according to its internal rules. For details, "
 "consult the find() function documentation."
-msgstr ""
+msgstr "find()関数にバックエンドを指定しない場合、内部ルールに従ってデフォルトのバックエンドの1つを使用します。 詳細については、find()関数のドキュメントを参照してください。"
 
 #: of usb.backend.IBackend:1
 msgid "Bases: :class:`usb._objfinalizer.AutoFinalizedObject`"
-msgstr ""
+msgstr "Bases: :class:`usb._objfinalizer.AutoFinalizedObject`"
 
 #: of usb.backend.IBackend:1
 msgid "Backend interface."
-msgstr ""
+msgstr "バックエンド・インターフェイス"
 
 #: of usb.backend.IBackend:3
 msgid ""
@@ -141,7 +141,7 @@ msgid ""
 "the methods of the interface raise a NotImplementedError exception. A "
 "backend implementation should replace the methods to provide the "
 "funcionality necessary."
-msgstr ""
+msgstr "IBackendは、バックエンド実装の基本的なインターフェイスです。 デフォルトでは、インターフェイスのメソッドはNotImplementedError例外を発生させます。 バックエンド実装は、必要な機能を提供するためにメソッドを置き換える必要があります。"
 
 #: of usb.backend.IBackend:8
 msgid ""
@@ -149,17 +149,17 @@ msgid ""
 "from IBackend: everything that behaves like an IBackend is an IBackend. "
 "But you are strongly recommended to do so, inheriting from IBackend "
 "provides consistent default behavior."
-msgstr ""
+msgstr "Pythonは動的型付き言語であるため、IBackendから継承する義務はありません。IBackendのように動作するものはすべてIBackendです。 ただし、IBackendから継承することをことを強くお勧めします。IBackendから継承すると、一貫したデフォルトの動作が提供されます。"
 
 #: of usb.backend.IBackend.attach_kernel_driver:1
 msgid ""
 "Re-attach an interface's kernel driver, which was previously detached "
 "using detach_kernel_driver()."
-msgstr ""
+msgstr "以前 detach_kernel_driver() を使用して切り離されていたインターフェイスのカーネル・ドライバーを再接続します。"
 
 #: of usb.backend.IBackend.bulk_read:1
 msgid "Perform a bulk read."
-msgstr ""
+msgstr "一括読み取り(bulk read)を実行します。"
 
 #: of usb.backend.IBackend.bulk_read:3
 msgid ""
@@ -170,16 +170,16 @@ msgid ""
 "data read, the length of the buffer tells how many bytes should be read. "
 "The timeout parameter specifies a time limit to the operation in "
 "miliseconds."
-msgstr ""
+msgstr "dev_handleは、 open_device()メソッドによって返される値です。 epパラメーターは、データの受信元となるエンドポイントのbEndpointAddressフィールドです。 intfは、エンドポイントを含むインターフェイスのbInterfaceNumberフィールドです。 buffパラメータは、読み取られたデータを受け取るためのバッファです。バッファの長さのバイト数だけデータが読み取られます。timeoutパラメータは、操作のタイムアウトをミリ秒単位で指定します。"
 
 #: of usb.backend.IBackend.bulk_read:11 usb.backend.IBackend.intr_read:11
 #: usb.backend.IBackend.iso_read:11
 msgid "The method returns the number of bytes actually read."
-msgstr ""
+msgstr "本メソッドは実際に読み取ったバイト数を返します。"
 
 #: of usb.backend.IBackend.bulk_write:1
 msgid "Perform a bulk write."
-msgstr ""
+msgstr "一括書き込み(bulk write)を実行します。"
 
 #: of usb.backend.IBackend.bulk_write:3 usb.backend.IBackend.intr_write:3
 #: usb.backend.IBackend.iso_write:3
@@ -190,16 +190,16 @@ msgid ""
 "the endpoint. The data parameter is the data to be sent. It must be an "
 "instance of the array.array class. The timeout parameter specifies a time"
 " limit to the operation in miliseconds."
-msgstr ""
+msgstr "dev_handleは、open_device()メソッドによって返される値です。 epパラメータは、データが送信されるエンドポイントのbEndpointAddressフィールドです。 intfは、エンドポイントを含むインターフェイスのbInterfaceNumberフィールドです。 dataパラメータは、送信されるデータです。 これは、array.arrayクラスのインスタンスでなければなりません。 timeoutパラメータは、操作のタイムアウトをミリ秒単位で指定します。"
 
 #: of usb.backend.IBackend.bulk_write:11 usb.backend.IBackend.intr_write:11
 #: usb.backend.IBackend.iso_write:11
 msgid "The method returns the number of bytes written."
-msgstr ""
+msgstr "本メソッドは書き込んだバイト数を返します。"
 
 #: of usb.backend.IBackend.claim_interface:1
 msgid "Claim the given interface."
-msgstr ""
+msgstr "与えたインターフェイスを要請(claim)します。"
 
 #: of usb.backend.IBackend.claim_interface:3
 msgid ""
@@ -207,37 +207,54 @@ msgid ""
 " an necessary call of the USB libraries. It requests exclusive access to "
 "the interface on the system. This method must be called before using one "
 "of the transfer methods."
-msgstr ""
+msgstr "インターフェイスの要請(claim)はUSB仕様自体には関係ありませんが、通常はUSBライブラリに必要な呼び出しです。システム上のインターフェイスへの排他的アクセスを要求(request)します。このメソッドは、いずれかの転送(transfer)メソッドを使用する前に呼び出す必要があります。"
 
 #: of usb.backend.IBackend.claim_interface:8
 msgid ""
 "dev_handle is the value returned by the open_device() method and intf is "
 "the bInterfaceNumber field of the desired interface."
-msgstr ""
+msgstr "dev_handleはopen_device()メソッドによって返された値で、intfは欲しいインターフェイスのbInterfaceNumberフィールドです。"
 
+# https://talking-english.net/stall/
+# stall（ストール）は屋台や露店のほかに、トイレの個室などを指して使われる言葉です。
+# もともとは牛や馬をとどめておくところを指して使われています。
+#
+# いろんな言葉の影響を受けて成り立ちが複雑ですが、
+# 大元の根源的な意味として「止める」ことにあり、何かを止める、
+# 留めるためのものだと思えば、このページで紹介するいろんな意味に納得がいくかもしれません。
+#
+# 動詞では「突然とまる」や「時間を引き延ばす」といった使い方が存在しています。１つ１つ例文にまとめてみました。
+# stallは元々、牛・豚の小屋（stable）の中の１頭１頭のために区画された場所を指したようで、
+# 普通の人はあまり使う単語ではありませんが今でもこの意味での使い方はあります。
+#
+# 動詞では突然動くのをやめること、あるいは進展するのをやめることです。
+# 乗り物に使われることが多いですが、交渉などにも使えます。
+#
+# もっと時間を作るために誰かをわざと遅れさせることで、
+# 「（時間稼ぎのために）待たせる、止める、引き延ばす」みたいな意味もあります。
 #: of usb.backend.IBackend.clear_halt:1
 msgid "Clear the halt/stall condition for the endpoint."
-msgstr ""
+msgstr "エンドポイントの停止/失速(halt/stall)状態をクリアします。"
 
 #: of usb.backend.IBackend.close_device:1
 msgid "Close the device handle."
-msgstr ""
+msgstr "デバイス・ハンドルをクローズする。"
 
 #: of usb.backend.IBackend.close_device:3
 msgid ""
 "This method closes the device communication channel and releases any "
 "system resources related to it."
-msgstr ""
+msgstr "このメソッドは、デバイスの通信チャネルを閉じ、それに関連するすべてのシステムリソースを解放します。"
 
 #: of usb.backend.IBackend.ctrl_transfer:1
 msgid "Perform a control transfer on the endpoint 0."
-msgstr ""
+msgstr "エンドポイント0(ゼロ)で制御(control)転送を実行します。"
 
 #: of usb.backend.IBackend.ctrl_transfer:3
 msgid ""
 "The direction of the transfer is inferred from the bmRequestType field of"
 " the setup packet."
-msgstr ""
+msgstr "転送の方向は、セットアップパケットのbmRequestTypeフィールドから推測されます。"
 
 #: of usb.backend.IBackend.ctrl_transfer:6
 msgid ""
@@ -249,40 +266,40 @@ msgid ""
 "receive is equal to the length of the array times the data.itemsize "
 "field. The timeout parameter specifies a time limit to the operation in "
 "miliseconds."
-msgstr ""
+msgstr "dev_handleは、 open_device() メソッドによって返される値です。 bmRequestTypeとbRequestとwValueとwIndexは、セットアップパケットの同名のフィールドです。 dataは配列オブジェクトです。OUTリクエストの場合はデータ・ステージで送信するバイトを格納しており、INリクエストの場合は読み取ったデータを保持するバッファです。 送信または受信が要求されたバイト数は、配列の長さにdata.itemsizeフィールドを掛けたものと同じです。 timeoutパラメータは、操作のタイムアウトをミリ秒単位で指定します。"
 
 #: of usb.backend.IBackend.ctrl_transfer:15
 msgid ""
 "Return the number of bytes written (for OUT transfers) or the data read "
 "(for IN transfers), as an array.array object."
-msgstr ""
+msgstr "OUT転送時は書き込んだバイト数を返します。IN転送時は読み込んだデータをarray.arrayオブジェクトとして返します。"
 
 #: of usb.backend.IBackend.detach_kernel_driver:1
 msgid "Detach a kernel driver from an interface."
-msgstr ""
+msgstr "インターフェイスからカーネル・ドライバを取り外します。"
 
 #: of usb.backend.IBackend.detach_kernel_driver:3
 msgid ""
 "If successful, you will then be able to claim the interface and perform "
 "I/O."
-msgstr ""
+msgstr "成功ならば、あなたはインターフェイスを要請(claim)して入出力を実行可能です。"
 
 #: of usb.backend.IBackend.enumerate_devices:1
 msgid ""
 "This function is required to return an iterable object which yields an "
 "implementation defined device identification for each USB device found in"
 " the system."
-msgstr ""
+msgstr "この関数は、システムで検出された各USBデバイスの実装定義のデバイスIDを生成する反復可能(iterable)なオブジェクトを返すために必要です。"
 
 #: of usb.backend.IBackend.enumerate_devices:5
 msgid ""
 "The device identification object is used as argument to other methods of "
 "the interface."
-msgstr ""
+msgstr "デバイス識別オブジェクト(device identification object)は、インターフェイスの他のメソッドへの引数として使用されます。"
 
 #: of usb.backend.IBackend.get_configuration:1
 msgid "Get the current active device configuration."
-msgstr ""
+msgstr "当座(current)のアクティブなデバイス構成(configuration)を取得。"
 
 #: of usb.backend.IBackend.get_configuration:3
 msgid ""
@@ -290,18 +307,18 @@ msgid ""
 "configuration. Depending on the backend and the OS, either a cached value"
 " may be returned or a control request may be issued. The dev_handle "
 "parameter is the value returned by the open_device method."
-msgstr ""
+msgstr "このメソッドは、現在アクティブな構成(configuration)のbConfigurationValueを返します。バックエンドとOSに応じて、キャッシュされた値が返されるか、制御要求(control request)が発行されます。dev_handleパラメータは、open_deviceメソッドによって返される値です。"
 
 #: of usb.backend.IBackend.get_configuration_descriptor:1
 msgid "Return a configuration descriptor of the given device."
-msgstr ""
+msgstr "与えたデバイスの構成(configuration)デスクリプタを返します。"
 
 #: of usb.backend.IBackend.get_configuration_descriptor:3
 msgid ""
 "The object returned is required to have all the Configuration Descriptor "
 "fields acessible as member variables. They must be convertible (but not "
 "required to be equal) to the int type."
-msgstr ""
+msgstr "返されるオブジェクトには、メンバー変数としてアクセス可能なすべての構成(configuration)デスクリプタ・フィールドが必要です。これらは、int型に変換可能である必要があります(等しい必要はありません)。"
 
 #: of usb.backend.IBackend.get_configuration_descriptor:7
 msgid ""
@@ -309,35 +326,35 @@ msgid ""
 "logical index of the configuration (not the bConfigurationValue field).  "
 "By \"logical index\" we mean the relative order of the configurations "
 "returned by the peripheral as a result of GET_DESCRIPTOR request."
-msgstr ""
+msgstr "devパラメータはデバイス識別オブジェクトです。configは構成(congigure)の論理インデックスです(bConfigurationValueフィールドではありません)。「論理インデックス」とは、GET_DESCRIPTORリクエストの結果としてペリフェラルによって返される構成の相対的な順序を意味します。"
 
 #: of usb.backend.IBackend.get_device_descriptor:1
 msgid "Return the device descriptor of the given device."
-msgstr ""
+msgstr "与えたデバイスのデバイス・デスクリプタを返します。"
 
 #: of usb.backend.IBackend.get_device_descriptor:3
 msgid ""
 "The object returned is required to have all the Device Descriptor fields "
 "accessible as member variables. They must be convertible (but not "
 "required to be equal) to the int type."
-msgstr ""
+msgstr "返されるオブジェクトには、すべてのデバイス・デスクリプタ・フィールドをメンバー変数としてアクセス可能にする必要があります。 これらは、int型に変換可能である必要があります(等しい必要はありません)。"
 
 #: of usb.backend.IBackend.get_device_descriptor:7
 msgid ""
 "dev is an object yielded by the iterator returned by the "
 "enumerate_devices() method."
-msgstr ""
+msgstr "devは、enumerate_devices()メソッドによって返されるイテレータによって生成されるオブジェクトです。"
 
 #: of usb.backend.IBackend.get_endpoint_descriptor:1
 msgid "Return an endpoint descriptor of the given device."
-msgstr ""
+msgstr "与えたデバイスのエンドポイント・デスクリプタを返します。"
 
 #: of usb.backend.IBackend.get_endpoint_descriptor:3
 msgid ""
 "The object returned is required to have all the Endpoint Descriptor "
 "fields acessible as member variables. They must be convertible (but not "
 "required to be equal) to the int type."
-msgstr ""
+msgstr "返されるオブジェクトには、メンバー変数としてアクセス可能なすべてのエンドポイント・デスクリプタ・フィールドが必要です。 これらは、int型に変換可能である必要があります(等しい必要はありません)。"
 
 #: of usb.backend.IBackend.get_endpoint_descriptor:7
 msgid ""
@@ -345,18 +362,18 @@ msgid ""
 "field) of the endpoint descriptor desired. dev, intf, alt and config are "
 "the same values already described in the get_interface_descriptor() "
 "method."
-msgstr ""
+msgstr "epパラメーターは、必要なエンドポイント・デスクリプタのエンドポイント論理インデックス(bEndpointAddressフィールドではない)です。 dev、intf、alt、configは、get_interface_descriptor()メソッドですでに説明済のものと同じ値です。"
 
 #: of usb.backend.IBackend.get_interface_descriptor:1
 msgid "Return an interface descriptor of the given device."
-msgstr ""
+msgstr "与えたデバイスのインターフェイス・デスクリプタを返します。"
 
 #: of usb.backend.IBackend.get_interface_descriptor:3
 msgid ""
 "The object returned is required to have all the Interface Descriptor "
 "fields accessible as member variables. They must be convertible (but not "
 "required to be equal) to the int type."
-msgstr ""
+msgstr "返されるオブジェクトには、すべてのインターフェイス・デスクリプタ・フィールドをメンバー変数としてアクセスできるようにする必要があります。 これらは、int型に変換可能である必要があります(等しい必要はありません)。"
 
 #: of usb.backend.IBackend.get_interface_descriptor:7
 msgid ""
@@ -366,15 +383,16 @@ msgid ""
 " Not every interface has more than one alternate setting.  In this case, "
 "the alt parameter should be zero. config is the configuration logical "
 "index (not the bConfigurationValue field)."
-msgstr ""
+msgstr "devパラメータはデバイス識別オブジェクトです。 intfパラメータは(bInterfaceNumberフィールドではなく)インターフェイスの論理インデックスであり、altは(bAlternateSetting値ではなく)代替設定(alternate setting)の論理インデックスです。すべてのインターフェイスに複数の代替設定(alternate setting)があるわけではありません。この場合、altパラメータはゼロにする必要があります。configは構成(configuration)の論理インデックスです(bConfigurationValueフィールドではありません)。"
 
 #: of usb.backend.IBackend.get_parent:1
 msgid "Return the parent device of the given device."
-msgstr ""
+msgstr "与えたデバイスの親デバイスを返します。"
 
+# interrut 原文のスペルミスと思われる。MLにて連絡済。
 #: of usb.backend.IBackend.intr_read:1
 msgid "Perform an interrut read."
-msgstr ""
+msgstr "割り込み読み取り(interrupt read)を実行します。"
 
 #: of usb.backend.IBackend.intr_read:3
 msgid ""
@@ -385,25 +403,25 @@ msgid ""
 "data read, the length of the buffer tells how many bytes should be read."
 "  The timeout parameter specifies a time limit to the operation in "
 "miliseconds."
-msgstr ""
+msgstr "dev_handleは、open_device()メソッドによって返される値です。epパラメーターは、データの受信元となるエンドポイントのbEndpointAddressフィールドです。intfは、エンドポイントを含むインターフェイスのbInterfaceNumberフィールドです。buffパラメータは、読み取られたデータを受け取るためのバッファです。バッファの長さのバイト数だけデータが読み取られます。timeoutパラメータは、操作のタイムアウトをミリ秒単位で指定します。"
 
 #: of usb.backend.IBackend.intr_write:1
 msgid "Perform an interrupt write."
-msgstr ""
+msgstr "割り込み書き込み(interrupt write)を実行します。"
 
 #: of usb.backend.IBackend.is_kernel_driver_active:1
 msgid "Determine if a kernel driver is active on an interface."
-msgstr ""
+msgstr "カーネル・ドライバーがインターフェイスでアクティブかどうかを確認します。"
 
 #: of usb.backend.IBackend.is_kernel_driver_active:3
 msgid ""
 "If a kernel driver is active, you cannot claim the interface, and the "
 "backend will be unable to perform I/O."
-msgstr ""
+msgstr "カーネル・ドライバがアクティブな場合、あなたはインターフェイスを要請(claim)できず、バックエンドは入出力を実行できません。"
 
 #: of usb.backend.IBackend.iso_read:1
 msgid "Perform an isochronous read."
-msgstr ""
+msgstr "アイソクロナス読み取りを実行します。"
 
 #: of usb.backend.IBackend.iso_read:3
 msgid ""
@@ -413,44 +431,44 @@ msgid ""
 "containing the endpoint. The buff parameter is buffer to receive the data"
 " read, the length of the buffer tells how many bytes should be read. The "
 "timeout parameter specifies a time limit to the operation in miliseconds."
-msgstr ""
+msgstr "dev_handleは、open_device()メソッドによって返される値です。epパラメーターは、データの受信元となるエンドポイントのbEndpointAddressフィールドです。intfは、エンドポイントを含むインターフェイスのbInterfaceNumberフィールドです。buffパラメータは、読み込まれたデータを受け取るためのバッファであり、バッファの長さのバイト数だけデータが読み込まれます。timeoutパラメータは、操作のタイムアウトをミリ秒単位で指定します。"
 
 #: of usb.backend.IBackend.iso_write:1
 msgid "Perform an isochronous write."
-msgstr ""
+msgstr "アイソクロナス書き込みを実行します。"
 
 #: of usb.backend.IBackend.open_device:1
 msgid "Open the device for data exchange."
-msgstr ""
+msgstr "データ交換(data exchange)のためにデバイスを開きます。"
 
 #: of usb.backend.IBackend.open_device:3
 msgid ""
 "This method opens the device identified by the dev parameter for "
 "communication. This method must be called before calling any "
 "communication related method, such as transfer methods."
-msgstr ""
+msgstr "このメソッドは、通信のためにdevパラメーターで識別されたデバイスを開きます。 このメソッドは、転送メソッドなどの通信関連メソッドを呼び出す前に呼び出す必要があります。"
 
 #: of usb.backend.IBackend.open_device:7
 msgid ""
 "It returns a handle identifying the communication instance. This handle "
 "must be passed to the communication methods."
-msgstr ""
+msgstr "通信インスタンス(communication instance)を識別するハンドルを返します。 このハンドルを通信メソッド(communication method)に渡す必要があります。"
 
 #: of usb.backend.IBackend.release_interface:1
 msgid "Release the claimed interface."
-msgstr ""
+msgstr "要請したインターフェイス(claimed interface)を開放する。"
 
 #: of usb.backend.IBackend.release_interface:3
 msgid "dev_handle and intf are the same parameters of the claim_interface method."
-msgstr ""
+msgstr "dev_handleとintfは、claim_interfaceメソッドと同様のパラメーターです。"
 
 #: of usb.backend.IBackend.reset_device:1
 msgid "Reset the device."
-msgstr ""
+msgstr "デバイスをリセットする。"
 
 #: of usb.backend.IBackend.set_configuration:1
 msgid "Set the active device configuration."
-msgstr ""
+msgstr "アクティブなデバイス構成(configurtion)をセットする。"
 
 #: of usb.backend.IBackend.set_configuration:3
 msgid ""
@@ -458,11 +476,11 @@ msgid ""
 "device. The dev_handle parameter is the value returned by the "
 "open_device() method and the config_value parameter is the "
 "bConfigurationValue field of the related configuration descriptor."
-msgstr ""
+msgstr "このメソッドは、デバイスのアクティブな構成を設定するために呼び出す必要があります。 dev_handleパラメータはopen_device()メソッドによって返される値であり、config_valueパラメータは関連する構成(configure)デスクリプタのbConfigurationValueフィールドです。"
 
 #: of usb.backend.IBackend.set_interface_altsetting:1
 msgid "Set the interface alternate setting."
-msgstr ""
+msgstr "インターフェイス代替設定(alternate setting)をセットする。"
 
 #: of usb.backend.IBackend.set_interface_altsetting:3
 msgid ""
@@ -470,5 +488,5 @@ msgid ""
 "alternate setting. The dev_handle is the value returned by the "
 "open_device() method. intf and altsetting are respectivelly the "
 "bInterfaceNumber and bAlternateSetting fields of the related interface."
-msgstr ""
+msgstr "このメソッドは、インターフェイスに複数の代替設定(alternate setting)がある場合にのみ呼び出す必要があります。dev_handleは、open_device()メソッドによって返される値です。intfとaltsettingは、それぞれ関連するインターフェイスのbInterfaceNumberおよびbAlternateSettingフィールドです。"
 
