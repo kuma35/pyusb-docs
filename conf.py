@@ -68,3 +68,6 @@ html_static_path = ['_static']
 # sphinx-intl
 locale_dirs = ['locale/']
 gettext_compact = False
+
+# for readthedocs
+master_doc = 'index'
