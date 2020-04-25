@@ -4,23 +4,22 @@
    contain the root `toctree` directive.
 
 Welcome to pyusb-docs's documentation!
-======================================
+++++++++++++++++++++++++++++++++++++++
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   README
-   docs/tutorial
-   docs/faq
    LICENSE
+   README
+   tutorial <docs/tutorial>
+   docs/faq
    api-docs/usb
    api-docs/usb.backend
-   api-docs/modules
 
 
 Indices and tables
-==================
+++++++++++++++++++
 
 * :ref:`genindex`
 * :ref:`modindex`

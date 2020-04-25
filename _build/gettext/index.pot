@@ -8,13 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyusb-docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-14 23:06+0900\n"
+"POT-Creation-Date: 2020-04-25 12:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../../index.rst:9
+msgid "tutorial"
+msgstr ""
 
 #: ../../index.rst:9
 #: ../../index.rst:9
@@ -25,18 +29,18 @@ msgstr ""
 msgid "Welcome to pyusb-docs's documentation!"
 msgstr ""
 
-#: ../../index.rst:23
+#: ../../index.rst:22
 msgid "Indices and tables"
 msgstr ""
 
-#: ../../index.rst:25
+#: ../../index.rst:24
 msgid ":ref:`genindex`"
 msgstr ""
 
-#: ../../index.rst:26
+#: ../../index.rst:25
 msgid ":ref:`modindex`"
 msgstr ""
 
-#: ../../index.rst:27
+#: ../../index.rst:26
 msgid ":ref:`search`"
 msgstr ""
