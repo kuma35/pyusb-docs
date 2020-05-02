@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pyusb-docs \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-14 23:21+0900\n"
-"PO-Revision-Date: 2020-04-16 10:41+0900\n"
+"PO-Revision-Date: 2020-05-02 04:36+0900\n"
 "Last-Translator: kuma35\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -31,7 +31,7 @@ msgstr "サブモジュール"
 
 #: ../../api-docs/usb.rst:16
 msgid "usb.control module"
-msgstr "usb.control module"
+msgstr "usb.control モジュール"
 
 #: of usb.control:1
 msgid "usb.control - USB standard control requests"
@@ -144,7 +144,7 @@ msgstr "インターフェイスの代替設定(alternate setting)を設定し�
 
 #: ../../api-docs/usb.rst:24
 msgid "usb.core module"
-msgstr ""
+msgstr "usb.core モジュール"
 
 #: of usb.core:1
 msgid "usb.core - Core USB features."
@@ -165,7 +165,7 @@ msgstr "Bases: :class:`usb._objfinalizer.AutoFinalizedObject`"
 
 #: of usb.core.Device:1
 msgid "Device object."
-msgstr ""
+msgstr "Deviceオブジェクトです。"
 
 #: of usb.core.Device:3
 msgid ""
@@ -173,7 +173,7 @@ msgid ""
 "USB Specification. You may access them as class properties.  For example,"
 " to access the field bDescriptorType of the device descriptor, you can do"
 " so:"
-msgstr ""
+msgstr "このクラスには、USB仕様に基づくデバイス・デスクリプタのすべてのフィールドが含まれています。 あなたはそれらにクラスのプロパティとしてアクセスできます。 たとえば、デバイス・デスクリプタのフィールドbDescriptorTypeにアクセスするには、次のようにします:"
 
 #: of usb.core.Device:12
 msgid ""
@@ -183,11 +183,11 @@ msgid ""
 " optionally call the set_interface_altsetting() to select the alternate "
 "setting (if there is more than one) of the interface used, and call the "
 "write() and read() methods to send and receive data, respectively."
-msgstr ""
+msgstr "さらに、クラスはハードウェアと通信するメソッドを提供します。 通常、アプリケーションは最初にset_configuration()メソッドを呼び出してデバイスを既知の構成済み状態(a known conifgured state)にし、代替設定が複数ある場合、オプションでset_interface_altsetting()を呼び出して、使用するインターフェイスの代替設定を選択し、 write() や read() メソッドでデータを送受信します。"
 
 #: of usb.core.Device:19
 msgid "When working in a new hardware, the first try could be like this:"
-msgstr ""
+msgstr "新しいハードウェアで作業する場合、最初の試行は次のようになります:"
 
 #: of usb.core.Device:26
 msgid ""
@@ -196,7 +196,7 @@ msgid ""
 "configures the device (by default, the configuration value is 1, which is"
 " a typical value for most devices) and then writes some data to the "
 "endpoint 0x01."
-msgstr ""
+msgstr "このサンプルでは、対象のデバイスを見つけ（myVendorIdおよびmyProductIdをデバイスの対応する値で置き換える必要があります）、デバイスを構成し（デフォルトでは、構成値(configuration value)は1であり、ほとんどのデバイスの一般的な値です）、エンドポイント0x01へデータを幾つか書き込みます。"
 
 #: of usb.core.Device:31
 msgid ""
@@ -204,47 +204,47 @@ msgid ""
 "specified in miliseconds. If the parameter is omitted, "
 "Device.default_timeout value will be used instead. This property can be "
 "set by the user at anytime."
-msgstr ""
+msgstr "書き込み、読み取り、およびctrl_transferメソッドのタイムアウト値はミリ秒単位で指定します。このパラメーターを省略した場合、代わりにDevice.default_timeout値が使用されます。Device.default_timeoutプロパティは、ユーザがいつでも設定できます。"
 
 #: of usb.core.Device.attach_kernel_driver:1
 msgid ""
 "Re-attach an interface's kernel driver, which was previously detached "
 "using detach_kernel_driver()."
-msgstr ""
+msgstr "以前にdetach_kernel_driver()を使って切り離し(detach)した、指定のインターフェイスのカーネル・ドライバを再接続(re-attach)します。"
 
 #: of usb.core.Device.attach_kernel_driver:4
 msgid ""
 "The interface parameter is the device interface number to attach the "
 "driver to."
-msgstr ""
+msgstr "interface パラメータは、ドライバを接続したい、デバイスのインターフェイス番号を指定します。"
 
 #: of usb.core.Device.backend:1
 msgid "Return the backend being used by the device."
-msgstr ""
+msgstr "そのデバイスが使っているバックエンドを返します。"
 
 #: of usb.core.Device.clear_halt:1
 msgid "Clear the halt/stall condition for the endpoint ep."
-msgstr ""
+msgstr "epに指定したエンドポイントの halt/stall 状態をクリアします。"
 
 #: of usb.core.Device.configurations:1
 msgid "Return a tuple of the device configurations."
-msgstr ""
+msgstr "そのデバイスの構成群をタプルで返します。"
 
 #: of usb.core.Device.ctrl_transfer:1
 msgid "Do a control transfer on the endpoint 0."
-msgstr ""
+msgstr "エンドポイント0で制御転送(control transfer)を行います。"
 
 #: of usb.core.Device.ctrl_transfer:3
 msgid ""
 "This method is used to issue a control transfer over the endpoint 0 "
 "(endpoint 0 is required to always be a control endpoint)."
-msgstr ""
+msgstr "このメソッドは、エンドポイント0を介して制御転送を発行するために使用します（エンドポイント0は常に制御エンドポイントである必要があります）。"
 
 #: of usb.core.Device.ctrl_transfer:6
 msgid ""
 "The parameters bmRequestType, bRequest, wValue and wIndex are the same of"
 " the USB Standard Control Request format."
-msgstr ""
+msgstr "パラメータbmRequestType、bRequest、wValue、wIndexは、USB標準制御要求(Standard Control Request)フォーマットと同じです。"
 
 #: of usb.core.Device.ctrl_transfer:9
 msgid ""
@@ -696,7 +696,7 @@ msgstr ""
 
 #: ../../api-docs/usb.rst:32
 msgid "usb.legacy module"
-msgstr ""
+msgstr "usb.legacy モジュール"
 
 #: of usb.legacy.Bus:1
 msgid "Bus object."
@@ -913,7 +913,7 @@ msgstr ""
 
 #: ../../api-docs/usb.rst:40
 msgid "usb.libloader module"
-msgstr ""
+msgstr "usb.libloader モジュール"
 
 #: of usb.libloader.LibraryMissingSymbolsException:1
 #: usb.libloader.LibraryNotFoundException:1
@@ -1022,11 +1022,11 @@ msgstr ""
 
 #: ../../api-docs/usb.rst:48
 msgid "usb.util module"
-msgstr ""
+msgstr "usb.util モジュール"
 
 #: of usb.util:1
 msgid "usb.util - Utility functions."
-msgstr ""
+msgstr "usb.util - ユーティリティ関数群。"
 
 #: of usb.util:5
 msgid ""
@@ -1268,15 +1268,15 @@ msgstr ""
 
 #: ../../api-docs/usb.rst:57
 msgid "Module contents"
-msgstr ""
+msgstr "モジュール内容"
 
 #: of usb:1
 msgid "PyUSB - Easy USB access in Python"
-msgstr ""
+msgstr "PyUSB - Pythonから簡単にUSBにアクセスできるようにします。"
 
 #: of usb:3
 msgid "This package exports the following modules and subpackages:"
-msgstr ""
+msgstr "本パッケージはイカのモジュールとサブバッケージをエクスポートします:"
 
 #: of usb:5
 msgid ""
@@ -1284,11 +1284,11 @@ msgid ""
 "0.x version backend - the support for backend implementations. control - "
 "USB standard control requests. libloader - helper module for backend "
 "library loading."
-msgstr ""
+msgstr "core - 主たるUSB実装、 legacy - 0.xバージョン利用者互換レイヤ、backend - バックエンド実装のサポート、 control - USB標準制御要求(standard control requests)、 libloader - バックエンドライブラリ読み込みのためのヘルパーモジュール"
 
 #: of usb:11
 msgid ""
 "Since version 1.0, main PyUSB implementation lives in the 'usb.core' "
 "module. New applications are encouraged to use it."
-msgstr ""
+msgstr "バージョン1.0以降では、メインのPyUSB実装は「usb.core」モジュールにあります。 新しいアプリケーションではそれを使用することをお勧めします。"
 

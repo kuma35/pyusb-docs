@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pyusb-docs \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-14 23:21+0900\n"
-"PO-Revision-Date: 2020-04-25 09:40+0900\n"
+"PO-Revision-Date: 2020-05-01 17:45+0900\n"
 "Last-Translator: kuma35\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -199,7 +199,7 @@ msgstr "本メソッドは書き込んだバイト数を返します。"
 
 #: of usb.backend.IBackend.claim_interface:1
 msgid "Claim the given interface."
-msgstr "与えたインターフェイスを要請(claim)します。"
+msgstr "指定のインターフェイスを要求(claim)します。"
 
 #: of usb.backend.IBackend.claim_interface:3
 msgid ""
@@ -207,7 +207,7 @@ msgid ""
 " an necessary call of the USB libraries. It requests exclusive access to "
 "the interface on the system. This method must be called before using one "
 "of the transfer methods."
-msgstr "インターフェイスの要請(claim)はUSB仕様自体には関係ありませんが、通常はUSBライブラリに必要な呼び出しです。システム上のインターフェイスへの排他的アクセスを要求(request)します。このメソッドは、いずれかの転送(transfer)メソッドを使用する前に呼び出す必要があります。"
+msgstr "インターフェイスの要求(claim)はUSB仕様自体には関係ありませんが、通常はUSBライブラリに必要な呼び出しです。システム上のインターフェイスへの排他的アクセスを要求(request)します。このメソッドは、いずれかの転送(transfer)メソッドを使用する前に呼び出す必要があります。"
 
 #: of usb.backend.IBackend.claim_interface:8
 msgid ""
@@ -282,7 +282,7 @@ msgstr "インターフェイスからカーネル・ドライバを取り外し
 msgid ""
 "If successful, you will then be able to claim the interface and perform "
 "I/O."
-msgstr "成功ならば、あなたはインターフェイスを要請(claim)して入出力を実行可能です。"
+msgstr "成功ならば、あなたはインターフェイスを要求(claim)して入出力を実行可能です。"
 
 #: of usb.backend.IBackend.enumerate_devices:1
 msgid ""
@@ -417,7 +417,7 @@ msgstr "カーネル・ドライバーがインターフェイスでアクティ
 msgid ""
 "If a kernel driver is active, you cannot claim the interface, and the "
 "backend will be unable to perform I/O."
-msgstr "カーネル・ドライバがアクティブな場合、あなたはインターフェイスを要請(claim)できず、バックエンドは入出力を実行できません。"
+msgstr "カーネル・ドライバがアクティブな場合、あなたはインターフェイスを要求(claim)できず、バックエンドは入出力を実行できません。"
 
 #: of usb.backend.IBackend.iso_read:1
 msgid "Perform an isochronous read."
@@ -456,7 +456,7 @@ msgstr "通信インスタンス(communication instance)を識別するハンド
 
 #: of usb.backend.IBackend.release_interface:1
 msgid "Release the claimed interface."
-msgstr "要請したインターフェイス(claimed interface)を開放する。"
+msgstr "要求済のインターフェイス(claimed interface)を開放する。"
 
 #: of usb.backend.IBackend.release_interface:3
 msgid "dev_handle and intf are the same parameters of the claim_interface method."
